@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Premium football shirt and sports memorabilia framing in Scotland. Bespoke framing for signed shirts, match-worn memorabilia, medals and presentation displays.",
   icons: {
-  icon: "/icon.PNG",
+  icon: "/images/icon.PNG",
 },
   keywords: [
     "football shirt framing",
