@@ -5,42 +5,29 @@ export default function Home() {
         <div className="logo">FRAME IT UK</div>
 
         <div className="navLinks">
-  <a href="/services">Services</a>
+          <a href="/services">Services</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/contact">Contact</a>
+        </div>
 
-  <a href="/how-it-works">How It Works</a>
-
-  <a href="/gallery">Gallery</a>
-
-  <a href="/contact">Contact</a>
-</div>
-
-        <button className="navBtn">Get a Quote</button>
+        <a href="/contact" className="navBtn">Get a Quote</a>
       </nav>
 
       <section className="hero">
         <div className="heroText">
-          <p className="eyebrow">
-            Bespoke Sports Memorabilia Framing
-          </p>
+          <p className="eyebrow">Bespoke Sports Memorabilia Framing</p>
 
-          <h1>
-            Frame the moment. Keep the memory.
-          </h1>
+          <h1>Frame the moment. Keep the memory.</h1>
 
           <p className="sub">
-            Premium framing for shirts, signed memorabilia,
-            match-worn items, medals, programmes and
-            sporting keepsakes.
+            Premium bespoke framing for shirts, signed memorabilia and sporting keepsakes.
+            Designed around your item, your story and your space.
           </p>
 
           <div className="heroButtons">
-            <button className="primary">
-              Get a Quote
-            </button>
-
-            <button className="secondary">
-              View Gallery
-            </button>
+            <a href="/contact" className="primary">Get a Quote</a>
+            <a href="/services" className="secondary">View Services</a>
           </div>
 
           <div className="trust">
@@ -53,76 +40,70 @@ export default function Home() {
         <div className="heroCard">
           <div className="frameMockup">
             <div className="shirt">⚽</div>
-            <p>Custom Shirt Display</p>
+            <p>Custom Memorabilia Display</p>
           </div>
         </div>
       </section>
 
       <section className="section">
-        <p className="eyebrow">What We Frame</p>
+        <p className="eyebrow">What We Do</p>
+        <h2>Turn sporting memories into display pieces.</h2>
 
-        <h2>Built around your memory</h2>
+        <p className="sub">
+          Whether it’s a signed shirt, a match-worn item, a medal, gloves or a club gift,
+          Frame It UK creates clean, premium displays that protect the memory and make it stand out.
+        </p>
 
         <div className="grid">
           {[
-            "Football Shirts",
+            "Shirt Framing",
             "Signed Memorabilia",
-            "Match-Worn Shirts",
-            "Boxing Gloves",
-            "Medals & Programmes",
-            "Team Presentations",
+            "Presentation Displays",
           ].map((item) => (
             <div className="card" key={item}>
               <h3>{item}</h3>
-
-              <p>
-                Bespoke layouts, premium finishes
-                and display-ready framing.
-              </p>
+              <p>Bespoke layouts, premium finishes and display-ready framing.</p>
             </div>
           ))}
+        </div>
+
+        <div className="heroButtons">
+          <a href="/services" className="primary">View All Services</a>
         </div>
       </section>
 
       <section className="how">
         <p className="eyebrow">How It Works</p>
-
-        <h2>Simple from start to finish</h2>
+        <h2>Simple, personal and bespoke.</h2>
 
         <div className="steps">
           <div>
             <strong>01</strong>
-            <p>Send us your item</p>
+            <p>Tell us what you want framed</p>
           </div>
 
           <div>
             <strong>02</strong>
-            <p>Choose your frame style</p>
+            <p>We agree the style and layout</p>
           </div>
 
           <div>
             <strong>03</strong>
-            <p>We design and frame it</p>
+            <p>Your item is framed and finished</p>
           </div>
+        </div>
 
-          <div>
-            <strong>04</strong>
-            <p>Collect or receive delivery</p>
-          </div>
+        <div className="heroButtons">
+          <a href="/how-it-works" className="secondary">See How It Works</a>
         </div>
       </section>
 
       <section className="cta">
         <h2>Ready to frame your sporting memory?</h2>
 
-        <p>
-          Send us a photo of your item and
-          we’ll come back with options.
-        </p>
+        <p>Send us a photo of your item and we’ll come back with options.</p>
 
-        <button className="primary">
-          Start Your Quote
-        </button>
+        <a href="/contact" className="primary">Start Your Quote</a>
       </section>
     </main>
   );
