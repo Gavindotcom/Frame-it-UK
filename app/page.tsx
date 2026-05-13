@@ -21,8 +21,8 @@ export default function Home() {
           <h1>Frame the moment. Keep the memory.</h1>
 
           <p className="sub">
-            Premium bespoke framing for shirts, signed memorabilia and sporting keepsakes.
-            Designed around your item, your story and your space.
+            Premium bespoke framing for shirts, signed memorabilia and sporting
+            keepsakes. Designed around your item, your story and your space.
           </p>
 
           <div className="heroButtons">
@@ -37,11 +37,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="heroCard">
-          <div className="frameMockup">
-            <div className="shirt">⚽</div>
-            <p>Custom Memorabilia Display</p>
-          </div>
+        <div className="heroCard imageHeroCard">
+          <img
+            src="/images/hero.jpg"
+            alt="Framed sports memorabilia by Frame It UK"
+            className="heroImage"
+          />
         </div>
       </section>
 
@@ -50,8 +51,9 @@ export default function Home() {
         <h2>Turn sporting memories into display pieces.</h2>
 
         <p className="sub">
-          Whether it’s a signed shirt, a match-worn item, a medal, gloves or a club gift,
-          Frame It UK creates clean, premium displays that protect the memory and make it stand out.
+          Whether it’s a signed shirt, a match-worn item, a medal, gloves or a
+          club gift, Frame It UK creates clean, premium displays that protect
+          the memory and make it stand out.
         </p>
 
         <div className="grid">
