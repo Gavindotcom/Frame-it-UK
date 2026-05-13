@@ -351,6 +351,18 @@ h2 {
   font-size: 15px;
 }
 
+.galleryFrame {
+  overflow: hidden;
+}
+
+.galleryImage {
+  transition: transform 0.5s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.04);
+}
+
 .footer {
   padding: 50px 7%;
   background: #050505;
