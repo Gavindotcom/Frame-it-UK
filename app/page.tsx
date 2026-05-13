@@ -43,7 +43,7 @@ export default function Home() {
           <div className="trust">
             <span>UK based</span>
             <span>Hand finished</span>
-            <span>From £75</span>
+            <span>From £70</span>
           </div>
         </div>
 
@@ -92,6 +92,27 @@ export default function Home() {
 
       <div className="divider" />
 
+      <section className="section">
+  <p className="eyebrow">Recent Work</p>
+  <h2>Built around the story behind the shirt.</h2>
+
+  <div className="galleryGrid">
+    {[
+      "/images/gallery1.PNG",
+      "/images/gallery2.PNG",
+      "/images/gallery3.PNG",
+    ].map((image) => (
+      <div className="galleryItem" key={image}>
+        <img
+          src={image}
+          alt="Frame It UK framed shirt"
+          className="galleryRealImage"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+      
       <section className="how">
         <p className="eyebrow">Why Choose Frame It UK</p>
 
