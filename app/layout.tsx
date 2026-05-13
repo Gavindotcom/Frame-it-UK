@@ -1,6 +1,8 @@
+import "./globals.css"
+
 export const metadata = {
   title: "Frame It UK",
-  description: "Bespoke sports memorabilia framing"
+  description: "Bespoke sports memorabilia framing",
 }
 
 export default function RootLayout({
