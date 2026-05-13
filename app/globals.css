@@ -143,22 +143,17 @@ h1 {
   box-shadow: 0 30px 80px rgba(0,0,0,0.5);
 }
 
-.frameMockup {
-  border: 18px solid #111;
-  outline: 1px solid #444;
-  height: 520px;
-  border-radius: 8px;
-  background: linear-gradient(180deg, #262626, #0f0f0f);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #e5e5e5;
+.imageHeroCard {
+  overflow: hidden;
+  padding: 0;
 }
 
-.shirt {
-  font-size: 90px;
-  margin-bottom: 20px;
+.heroImage {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
 }
 
 .section,
@@ -302,94 +297,49 @@ h2 {
   cursor: pointer;
 }
 
-@media (max-width: 850px) {
-
-  .nav {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .navLinks {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .grid,
-  .steps,
-  .contactWrap {
-    grid-template-columns: 1fr;
-  }
-
-  .frameMockup {
-    height: 340px;
-  }
-
-  .contactForm {
-    padding: 24px;
-  }
-
-  h1 {
-    font-size: 56px;
-  }
-
-  h2 {
-    font-size: 42px;
-  }
-
-  .sub {
-    font-size: 18px;
-  }
-}
 .galleryGrid {
+  padding: 20px 7% 90px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 24px;
+  align-items: start;
 }
 
 .galleryItem {
   background: #111;
   border: 1px solid #2a2a2a;
   border-radius: 26px;
-  padding: 22px;
+  padding: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.galleryFrame {
-  height: 320px;
-  border: 16px solid #050505;
-  outline: 1px solid #3a3a3a;
-  border-radius: 8px;
-  background: linear-gradient(180deg, #2a2a2a, #0c0c0c);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.galleryItem:hover {
+  transform: translateY(-6px);
 }
 
-.galleryIcon {
-  color: #f97316;
-  font-size: 70px;
+.galleryImage {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  border-radius: 18px;
+  display: block;
+  background: #0b0b0b;
+  padding: 10px;
 }
 
 .galleryItem h3 {
-  font-size: 22px;
-  margin-top: 24px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .galleryItem p {
   color: #bdbdbd;
   line-height: 1.5;
+  font-size: 15px;
 }
 
-@media (max-width: 850px) {
-  .galleryGrid {
-    grid-template-columns: 1fr;
-  }
-}
 .footer {
   padding: 50px 7%;
   background: #050505;
@@ -422,15 +372,59 @@ h2 {
   font-size: 14px;
   color: #777;
 }
-.imageHeroCard {
-  overflow: hidden;
-  padding: 0;
+
+@media (max-width: 1100px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.heroImage {
-  width: 100%;
-  height: 100%;
-  min-height: 520px;
-  object-fit: cover;
-  display: block;
+@media (max-width: 850px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navLinks {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid,
+  .steps,
+  .contactWrap,
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm {
+    padding: 24px;
+  }
+
+  .heroImage {
+    min-height: 340px;
+  }
+
+  .galleryImage {
+    height: 260px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  .sub {
+    font-size: 18px;
+  }
 }
