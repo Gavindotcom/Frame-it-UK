@@ -461,3 +461,20 @@ h2 {
     font-size: 18px;
   }
 }
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25D366;
+  color: white;
+  padding: 16px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  z-index: 9999;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+.whatsapp:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
