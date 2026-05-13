@@ -346,3 +346,47 @@ h2 {
     font-size: 18px;
   }
 }
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.galleryItem {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 26px;
+  padding: 22px;
+}
+
+.galleryFrame {
+  height: 320px;
+  border: 16px solid #050505;
+  outline: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #2a2a2a, #0c0c0c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galleryIcon {
+  color: #f97316;
+  font-size: 70px;
+}
+
+.galleryItem h3 {
+  font-size: 22px;
+  margin-top: 24px;
+}
+
+.galleryItem p {
+  color: #bdbdbd;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}
