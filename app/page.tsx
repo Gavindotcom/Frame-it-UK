@@ -52,7 +52,7 @@ export default function Home() {
 
         <div className="heroCard imageHeroCard">
           <img
-            src="/images/hero.png"
+            src="/images/hero.PNG"
             alt="Frame It UK"
             className="heroImage"
           />
@@ -68,9 +68,9 @@ export default function Home() {
 
         <div className="galleryGrid">
           {[
-            "/images/gallery1.PNG",
-            "/images/gallery2.PNG",
-            "/images/gallery3.PNG",
+            "/images/gallery-1.PNG",
+            "/images/gallery-2.PNG",
+            "/images/gallery-3.PNG",
           ].map((image) => (
             <div className="galleryItem" key={image}>
               <img
