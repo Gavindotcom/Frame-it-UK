@@ -71,6 +71,7 @@ export default function Home() {
             "/images/gallery-1.PNG",
             "/images/gallery-2.PNG",
             "/images/gallery-3.PNG",
+            "/images/gallery-15.JPEG",
           ].map((image) => (
             <div className="galleryItem" key={image}>
               <img
