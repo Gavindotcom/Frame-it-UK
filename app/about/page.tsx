@@ -1,6 +1,7 @@
 export default function About() {
   return (
     <main className="site">
+
       <nav className="nav">
         <div className="logo">FRAME IT UK</div>
 
@@ -8,7 +9,6 @@ export default function About() {
           <a href="/">Home</a>
           <a href="/services">Services</a>
           <a href="/gallery">Gallery</a>
-          <a href="/about">About</a>
           <a href="/contact">Contact</a>
         </div>
 
@@ -21,82 +21,116 @@ export default function About() {
         <p className="eyebrow">About Frame It UK</p>
 
         <h1>
-          Premium sports memorabilia framing built around your story.
+          Premium sports memorabilia framing, built around the story.
         </h1>
 
         <p className="sub">
-          Frame It UK creates bespoke framed displays for signed shirts,
-          match-worn kits, medals, photos and sporting memories.
-          Every piece is individually designed and hand finished in Scotland.
+          Frame It UK was created from a passion for football, sport and the memories
+          attached to every shirt, medal and signed piece.
+          Based in Scotland, we specialise in bespoke sports memorabilia framing
+          designed to turn personal moments into premium display pieces.
         </p>
       </section>
 
       <section className="section">
         <div className="grid">
+
           <div className="card">
-            <h3>Hand Finished</h3>
+            <h3>Built For Collectors</h3>
             <p>
-              Every frame is individually assembled with attention to detail,
-              layout and presentation quality.
+              Whether it’s a signed professional shirt, a child’s first football top,
+              a cup final memory or a match-worn piece, every frame is designed
+              around the importance of the item.
             </p>
           </div>
 
           <div className="card">
-            <h3>Built Around Your Item</h3>
+            <h3>Premium Finish</h3>
             <p>
-              Shirt layouts, mount colours, photos, plaques and spacing are all
-              designed specifically for your memorabilia.
+              Every display is carefully planned using premium materials,
+              clean layouts and modern presentation styles to create
+              a professional finish worthy of display.
             </p>
           </div>
 
           <div className="card">
-            <h3>Scotland Based</h3>
+            <h3>Bespoke Design</h3>
             <p>
-              Based in Scotland and working with customers across the UK for
-              football shirts, signed memorabilia and sporting displays.
+              No two pieces are the same. From mount colours and layouts
+              to photos, nameplates and additional memorabilia,
+              every frame is tailored to the customer.
             </p>
           </div>
+
         </div>
       </section>
 
-      <section className="section">
-        <p className="eyebrow">Customer Feedback</p>
+      <section className="how">
+        <p className="eyebrow">Why Choose Us</p>
 
-        <div className="grid">
-          <div className="card">
-            <p>
-              “Absolutely brilliant quality. The frame exceeded expectations.”
-            </p>
-            <h3>★★★★★</h3>
+        <h2>
+          More than framing.
+          Preserving memories.
+        </h2>
+
+        <div className="steps">
+
+          <div>
+            <strong>01</strong>
+            <p>Professional handcrafted presentation</p>
           </div>
 
-          <div className="card">
-            <p>
-              “Perfect gift for my son. Professional from start to finish.”
-            </p>
-            <h3>★★★★★</h3>
+          <div>
+            <strong>02</strong>
+            <p>Modern premium framing styles</p>
           </div>
 
-          <div className="card">
-            <p>
-              “The signed shirt looks unbelievable on the wall.”
-            </p>
-            <h3>★★★★★</h3>
+          <div>
+            <strong>03</strong>
+            <p>Designed around your item and story</p>
           </div>
+
+          <div>
+            <strong>04</strong>
+            <p>Trusted by football fans and collectors</p>
+          </div>
+
         </div>
       </section>
 
       <section className="cta">
-        <h2>Ready to frame your piece?</h2>
+        <h2>Ready to frame your memory?</h2>
 
         <p>
-          Send us a photo of your item and we’ll recommend the best layout.
+          Send us a photo of your item and we’ll help create the perfect display.
         </p>
 
         <a href="/contact" className="primary">
           Get a Quote
         </a>
       </section>
+
+      <footer className="footer">
+        <div>
+          <h3>FRAME IT UK</h3>
+
+          <p>
+            Bespoke sports memorabilia framing based in Scotland.
+          </p>
+        </div>
+
+        <div className="footerLinks">
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/contact">Contact</a>
+        </div>
+
+        <div className="footerSmall">
+          © 2026 Frame It UK. All rights reserved.
+        </div>
+      </footer>
+
     </main>
   );
 }
