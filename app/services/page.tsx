@@ -82,12 +82,32 @@ export default function Services() {
       </section>
 
       <section className="cta">
-        <h2>Framing starts from £75</h2>
-        <p>
-          Send us a photo of your item and we’ll recommend the best display option.
-        </p>
-        <a href="/contact" className="primary">Get a Quote</a>
-      </section>
+  <h2>Framing starts from £75</h2>
+
+  <p>
+    Send us a photo of your item and we’ll recommend the best display option.
+  </p>
+
+  <div className="heroButtons">
+    <a href="/contact" className="primary">
+      Get a Quote
+    </a>
+
+    <a
+      href="/football-shirt-framing-scotland"
+      className="secondary"
+    >
+      Football Shirt Framing Scotland
+    </a>
+
+    <a
+      href="/signed-football-shirt-framing"
+      className="secondary"
+    >
+      Signed Football Shirt Framing
+    </a>
+  </div>
+</section>
     </main>
   );
 }
