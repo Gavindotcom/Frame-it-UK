@@ -39,7 +39,7 @@ export default function Home() {
 
         <div className="heroCard imageHeroCard">
           <img
-            src="/images/hero.png"
+            src="/images/hero.PNG"
             alt="Framed sports memorabilia by Frame It UK"
             className="heroImage"
           />
