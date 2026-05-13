@@ -9,6 +9,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .site {
   min-height: 100vh;
   background:
@@ -38,7 +42,6 @@ body {
 
 .navLinks a {
   color: #d4d4d4;
-  text-decoration: none;
   font-size: 14px;
   font-weight: 600;
   transition: 0.3s;
@@ -50,12 +53,21 @@ body {
 
 .navBtn,
 .primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background: #f97316;
   color: white;
   border: none;
   padding: 14px 22px;
   border-radius: 999px;
   font-weight: 700;
+  transition: 0.3s;
+}
+
+.primary:hover,
+.navBtn:hover {
+  opacity: 0.9;
 }
 
 .hero {
@@ -93,9 +105,13 @@ h1 {
   display: flex;
   gap: 16px;
   margin-top: 34px;
+  flex-wrap: wrap;
 }
 
 .secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background: transparent;
   color: white;
   border: 1px solid #555;
@@ -219,18 +235,85 @@ h2 {
   margin-top: 20px;
 }
 
+.contactWrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contactForm {
+  background: linear-gradient(145deg, #151515, #080808);
+  border: 1px solid #2a2a2a;
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.formGroup label {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  background: #050505;
+  border: 1px solid #3a3a3a;
+  color: #ffffff;
+  padding: 16px 18px;
+  border-radius: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #8a8a8a;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contactInfo .card {
+  min-height: 150px;
+}
+
+.contactForm .primary {
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 @media (max-width: 850px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
   .navLinks {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 16px;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 12px;
   }
 
   .hero {
@@ -238,11 +321,28 @@ h2 {
   }
 
   .grid,
-  .steps {
+  .steps,
+  .contactWrap {
     grid-template-columns: 1fr;
   }
 
   .frameMockup {
     height: 340px;
+  }
+
+  .contactForm {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  .sub {
+    font-size: 18px;
   }
 }
