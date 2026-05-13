@@ -66,7 +66,7 @@ export default function Home() {
           Built around the story behind the shirt.
         </h2>
 
-        <div className="galleryGrid">
+        <div className="homeGallery">
           {[
             "/images/gallery-1.PNG",
             "/images/gallery-2.PNG",
