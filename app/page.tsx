@@ -35,6 +35,9 @@ export default function Home() {
             <a href="/services" className="secondary">
               View Services
             </a>
+            <a href="/football-shirt-framing-scotland" className="secondary">
+  Football Shirt Framing Scotland
+</a>
           </div>
 
           <div className="trust">
