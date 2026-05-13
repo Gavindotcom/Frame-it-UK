@@ -39,7 +39,7 @@ export default function Home() {
 
         <div className="heroCard imageHeroCard">
           <img
-            src="/images/hero.PNG"
+            src="/images/hero.png"
             alt="Framed sports memorabilia by Frame It UK"
             className="heroImage"
           />
@@ -57,11 +57,7 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          {[
-            "Shirt Framing",
-            "Signed Memorabilia",
-            "Presentation Displays",
-          ].map((item) => (
+          {["Shirt Framing", "Signed Memorabilia", "Presentation Displays"].map((item) => (
             <div className="card" key={item}>
               <h3>{item}</h3>
               <p>Bespoke layouts, premium finishes and display-ready framing.</p>
@@ -74,8 +70,8 @@ export default function Home() {
         </div>
       </section>
 
-      </section>
       <div className="divider" />
+
       <section className="how">
         <p className="eyebrow">How It Works</p>
         <h2>Simple, personal and bespoke.</h2>
@@ -104,11 +100,17 @@ export default function Home() {
 
       <section className="cta">
         <h2>Ready to frame your sporting memory?</h2>
-
         <p>Send us a photo of your item and we’ll come back with options.</p>
-
         <a href="/contact" className="primary">Start Your Quote</a>
       </section>
+
+      <a
+        href="https://wa.me/447000000000"
+        className="whatsapp"
+        target="_blank"
+      >
+        WhatsApp
+      </a>
     </main>
   );
 }
