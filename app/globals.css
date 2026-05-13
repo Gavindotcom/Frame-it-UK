@@ -123,17 +123,6 @@ h1 {
   min-width: 220px;
 }
 
-@media (max-width: 850px) {
-  .heroButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .heroButtons a {
-    width: 100%;
-    max-width: 320px;
-  }
-
 .secondary {
   display: inline-flex;
   justify-content: center;
@@ -353,6 +342,30 @@ h2 {
   display: block;
   background: #0b0b0b;
   padding: 10px;
+  transition: transform 0.5s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.04);
+}
+
+.galleryRealImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.homeGallery {
+  padding: 20px 7% 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.homeGallery .galleryItem {
+  padding: 10px;
 }
 
 .galleryItem h3 {
@@ -367,18 +380,6 @@ h2 {
   font-size: 15px;
 }
 
-.galleryFrame {
-  overflow: hidden;
-}
-
-.galleryImage {
-  transition: transform 0.5s ease;
-}
-
-.galleryItem:hover .galleryImage {
-  transform: scale(1.04);
-}
-
 .divider {
   width: 100%;
   height: 1px;
@@ -389,6 +390,7 @@ h2 {
     transparent
   );
 }
+
 .footer {
   padding: 50px 7%;
   background: #050505;
@@ -422,14 +424,35 @@ h2 {
   color: #777;
 }
 
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25D366;
+  color: white;
+  padding: 16px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  z-index: 9999;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+.whatsapp:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
 @media (max-width: 1100px) {
   .galleryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .homeGallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 850px) {
-
   .nav {
     flex-direction: column;
     gap: 14px;
@@ -448,9 +471,18 @@ h2 {
 
   .grid,
   .steps,
-  .contactWrap,
-  .galleryGrid {
+  .contactWrap {
     grid-template-columns: 1fr;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroButtons a {
+    width: 100%;
+    max-width: 320px;
   }
 
   .contactForm {
@@ -461,8 +493,23 @@ h2 {
     min-height: 340px;
   }
 
-  .galleryImage {
-    height: 260px;
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .homeGallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px 7% 60px;
+  }
+
+  .galleryRealImage {
+    height: 105px;
+  }
+
+  .homeGallery .galleryItem {
+    padding: 6px;
+    border-radius: 16px;
   }
 
   h1 {
@@ -476,21 +523,4 @@ h2 {
   .sub {
     font-size: 18px;
   }
-}
-.whatsapp {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #25D366;
-  color: white;
-  padding: 16px 22px;
-  border-radius: 999px;
-  font-weight: 700;
-  z-index: 9999;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
-}
-
-.whatsapp:hover {
-  transform: translateY(-3px);
-  opacity: 0.95;
 }
