@@ -5,6 +5,7 @@ export default function Home() {
         <div className="logo">FRAME IT UK</div>
 
         <div className="navLinks">
+          <a href="/about">About</a>
           <a href="/services">Services</a>
           <a href="/how-it-works">How It Works</a>
           <a href="/gallery">Gallery</a>
