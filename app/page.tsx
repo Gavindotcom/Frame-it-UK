@@ -4,13 +4,11 @@ export default function Home() {
       <nav className="nav">
         <div className="logo">FRAME IT UK</div>
         <div className="navLinks">
-          <a>Services</a>
-          <a>How It Works</a>
-          <a>Gallery</a>
-          <a>Contact</a>
-        </div>
-        <button className="navBtn">Get a Quote</button>
-      </nav>
+  <a href="/services">Services</a>
+  <a href="/how-it-works">How It Works</a>
+  <a href="/gallery">Gallery</a>
+  <a href="/contact">Contact</a>
+</div>
 
       <section className="hero">
         <div className="heroText">
