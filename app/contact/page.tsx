@@ -17,13 +17,13 @@ export default function Contact() {
       </nav>
 
       <section className="section">
-        <p className="eyebrow">Get a Quote</p>
+        <p className="eyebrow">Build Your Frame</p>
 
-        <h1>Tell us about your item.</h1>
+        <h1>Create your bespoke display.</h1>
 
         <p className="sub">
-          Send us a few details and upload a photo of your item. We’ll come back
-          with framing options, pricing and next steps.
+          Tell us about your item, upload a photo and choose your preferred
+          framing style.
         </p>
       </section>
 
@@ -66,21 +66,62 @@ export default function Contact() {
 
             <div className="formGroup">
               <label>Item Type</label>
+
               <select name="itemType" required>
-                <option value="">Select an option</option>
+                <option value="">Select item type</option>
                 <option>Football Shirt</option>
-                <option>Signed Memorabilia</option>
+                <option>Signed Shirt</option>
                 <option>Boxing Gloves</option>
                 <option>Medals & Programmes</option>
                 <option>Presentation Display</option>
-                <option>Other</option>
+                <option>Other Memorabilia</option>
+              </select>
+            </div>
+
+            <div className="formGroup">
+              <label>Frame Colour</label>
+
+              <select name="frameColour">
+                <option value="">Select frame colour</option>
+                <option>Black</option>
+                <option>White</option>
+                <option>Oak</option>
+                <option>Walnut</option>
+                <option>Gold Trim</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div className="formGroup">
+              <label>Mount Style</label>
+
+              <select name="mountStyle">
+                <option value="">Select mount style</option>
+                <option>Single Mount</option>
+                <option>Double Mount</option>
+                <option>Club Colours</option>
+                <option>Premium Contrast</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div className="formGroup">
+              <label>Additions</label>
+
+              <select name="extras">
+                <option value="">Select extras</option>
+                <option>Name Plaque</option>
+                <option>Photos</option>
+                <option>Certificate Display</option>
+                <option>Multiple Items</option>
               </select>
             </div>
 
             <div className="formGroup">
               <label>Collection or Delivery</label>
-              <select name="collectionOrDelivery">
-                <option value="">Select an option</option>
+
+              <select name="delivery">
+                <option value="">Select option</option>
                 <option>Collection</option>
                 <option>Delivery</option>
                 <option>Not sure yet</option>
@@ -89,6 +130,7 @@ export default function Contact() {
 
             <div className="formGroup">
               <label>Upload a photo</label>
+
               <input
                 type="file"
                 name="photo"
@@ -97,47 +139,59 @@ export default function Contact() {
             </div>
 
             <div className="formGroup">
-              <label>Message</label>
+              <label>Additional Details</label>
+
               <textarea
                 name="message"
                 rows={6}
-                placeholder="Tell us about your item, framing ideas or preferred style."
-                required
+                placeholder="Tell us anything else about your frame idea."
               ></textarea>
             </div>
 
             <input
               type="hidden"
               name="_subject"
-              value="New Frame It UK Quote Request"
+              value="New Frame Builder Request"
             />
 
             <button className="primary" type="submit">
-              Request Quote
+              Build My Quote
             </button>
           </form>
 
           <div className="contactInfo">
             <div className="card">
-              <h3>Bespoke Service</h3>
+              <h3>Bespoke Layouts</h3>
+
               <p>
-                Every frame is designed individually around your item, story and
-                preferred layout.
+                Every design is tailored around your item, colours and preferred
+                display style.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3>Premium Finish</h3>
+
+              <p>
+                Hand-finished displays designed to protect and elevate your
+                memorabilia.
               </p>
             </div>
 
             <div className="card">
               <h3>Collection & Delivery</h3>
+
               <p>
-                Scotland-based collection and secure UK-wide return delivery
-                options available.
+                Scotland-based collection and secure UK-wide delivery options
+                available.
               </p>
             </div>
 
             <div className="card">
               <h3>Pricing</h3>
+
               <p>
-                Framing starts from £75 depending on size, layout and extras.
+                Bespoke framing starts from £75 depending on layout and extras.
               </p>
             </div>
           </div>
@@ -145,8 +199,11 @@ export default function Contact() {
       </section>
 
       <section className="cta">
-        <h2>Preserve the memory properly.</h2>
-        <p>Frame It UK creates premium display pieces designed to last.</p>
+        <h2>Your memory deserves more than storage.</h2>
+
+        <p>
+          Build a premium display piece designed to last for years.
+        </p>
       </section>
     </main>
   );
