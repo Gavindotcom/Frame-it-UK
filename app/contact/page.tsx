@@ -69,4 +69,85 @@ export default function Contact() {
               <select name="itemType" required>
                 <option value="">Select an option</option>
                 <option>Football Shirt</option>
-               
+                <option>Signed Memorabilia</option>
+                <option>Boxing Gloves</option>
+                <option>Medals & Programmes</option>
+                <option>Presentation Display</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div className="formGroup">
+              <label>Collection or Delivery</label>
+              <select name="collectionOrDelivery">
+                <option value="">Select an option</option>
+                <option>Collection</option>
+                <option>Delivery</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div className="formGroup">
+              <label>Upload a photo</label>
+              <input
+                type="file"
+                name="photo"
+                accept="image/*"
+              />
+            </div>
+
+            <div className="formGroup">
+              <label>Message</label>
+              <textarea
+                name="message"
+                rows={6}
+                placeholder="Tell us about your item, framing ideas or preferred style."
+                required
+              ></textarea>
+            </div>
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Frame It UK Quote Request"
+            />
+
+            <button className="primary" type="submit">
+              Request Quote
+            </button>
+          </form>
+
+          <div className="contactInfo">
+            <div className="card">
+              <h3>Bespoke Service</h3>
+              <p>
+                Every frame is designed individually around your item, story and
+                preferred layout.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3>Collection & Delivery</h3>
+              <p>
+                Scotland-based collection and secure UK-wide return delivery
+                options available.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3>Pricing</h3>
+              <p>
+                Framing starts from £75 depending on size, layout and extras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta">
+        <h2>Preserve the memory properly.</h2>
+        <p>Frame It UK creates premium display pieces designed to last.</p>
+      </section>
+    </main>
+  );
+}
