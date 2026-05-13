@@ -1,34 +1,86 @@
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="site">
+      <nav className="nav">
+        <div className="logo">FRAME IT UK</div>
+        <div className="navLinks">
+          <a>Services</a>
+          <a>How It Works</a>
+          <a>Gallery</a>
+          <a>Contact</a>
+        </div>
+        <button className="navBtn">Get a Quote</button>
+      </nav>
 
-      <section className="h-screen flex flex-col items-center justify-center text-center px-6">
-        
-        <p className="text-orange-500 uppercase tracking-[0.3em] mb-4">
-          Frame It UK
-        </p>
+      <section className="hero">
+        <div className="heroText">
+          <p className="eyebrow">Bespoke Sports Memorabilia Framing</p>
+          <h1>Frame the moment. Keep the memory.</h1>
+          <p className="sub">
+            Premium framing for shirts, signed memorabilia, match-worn items,
+            medals, programmes and sporting keepsakes.
+          </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold max-w-5xl leading-tight">
-          Bespoke Sports Memorabilia Framing
-        </h1>
+          <div className="heroButtons">
+            <button className="primary">Get a Quote</button>
+            <button className="secondary">View Gallery</button>
+          </div>
 
-        <p className="text-gray-300 text-xl max-w-2xl mt-6">
-          Preserve your shirts, signed memorabilia and sporting memories
-          with handcrafted premium framing.
-        </p>
-
-        <div className="flex gap-4 mt-10">
-          <button className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold transition">
-            Get a Quote
-          </button>
-
-          <button className="border border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-black transition">
-            View Gallery
-          </button>
+          <div className="trust">
+            <span>UK based</span>
+            <span>Hand finished</span>
+            <span>From £75</span>
+          </div>
         </div>
 
+        <div className="heroCard">
+          <div className="frameMockup">
+            <div className="shirt">⚽</div>
+            <p>Custom Shirt Display</p>
+          </div>
+        </div>
       </section>
 
+      <section className="section">
+        <p className="eyebrow">What We Frame</p>
+        <h2>Built around your memory</h2>
+
+        <div className="grid">
+          {[
+            "Football Shirts",
+            "Signed Memorabilia",
+            "Match-Worn Shirts",
+            "Boxing Gloves",
+            "Medals & Programmes",
+            "Team Presentations",
+          ].map((item) => (
+            <div className="card" key={item}>
+              <h3>{item}</h3>
+              <p>
+                Bespoke layouts, premium finishes and display-ready framing.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="how">
+        <p className="eyebrow">How It Works</p>
+        <h2>Simple from start to finish</h2>
+
+        <div className="steps">
+          <div><strong>01</strong><p>Send us your item</p></div>
+          <div><strong>02</strong><p>Choose your frame style</p></div>
+          <div><strong>03</strong><p>We design and frame it</p></div>
+          <div><strong>04</strong><p>Collect or receive delivery</p></div>
+        </div>
+      </section>
+
+      <section className="cta">
+        <h2>Ready to frame your sporting memory?</h2>
+        <p>Send us a photo of your item and we’ll come back with options.</p>
+        <button className="primary">Start Your Quote</button>
+      </section>
     </main>
-  )
+  );
 }
