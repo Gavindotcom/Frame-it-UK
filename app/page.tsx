@@ -74,6 +74,8 @@ export default function Home() {
         </div>
       </section>
 
+      </section>
+<div className="divider"></div>
       <section className="how">
         <p className="eyebrow">How It Works</p>
         <h2>Simple, personal and bespoke.</h2>
