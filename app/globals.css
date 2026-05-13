@@ -390,3 +390,35 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.footer {
+  padding: 50px 7%;
+  background: #050505;
+  border-top: 1px solid #222;
+  display: grid;
+  gap: 24px;
+}
+
+.footer h3 {
+  color: #f97316;
+  letter-spacing: 3px;
+}
+
+.footer p {
+  color: #bdbdbd;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  color: #d4d4d4;
+  font-weight: 600;
+}
+
+.footerSmall {
+  font-size: 14px;
+  color: #777;
+}
