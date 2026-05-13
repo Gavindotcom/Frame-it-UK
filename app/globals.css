@@ -221,7 +221,16 @@ h2 {
 
 @media (max-width: 850px) {
   .navLinks {
-    display: none;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .hero {
