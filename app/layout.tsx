@@ -6,6 +6,9 @@ export const metadata = {
   title: "Frame It UK | Bespoke Sports Memorabilia Framing",
   description:
     "Premium football shirt and sports memorabilia framing in Scotland. Bespoke framing for signed shirts, match-worn memorabilia, medals and presentation displays.",
+  icons: {
+  icon: "/icon.png",
+},
   keywords: [
     "football shirt framing",
     "sports memorabilia framing",
