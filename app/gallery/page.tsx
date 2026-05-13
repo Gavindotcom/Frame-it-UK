@@ -1,35 +1,35 @@
 export default function Gallery() {
   const galleryImages = [
     {
-      image: "/images/gallery1.PNG",
+      image: "/images/gallery-1.PNG",  
       title: "Signed Rangers Shirt",
     },
     {
-      image: "/images/gallery2.PNG",
+      image: "/images/gallery-2.PNG",
       title: "Signed Celtic Shirt",
     },
     {
-      image: "/images/gallery3.PNG",
+      image: "/images/gallery-3.PNG",
       title: "Bonnyrigg Rose Display",
     },
     {
-      image: "/images/gallery4.PNG",
+      image: "/images/gallery-4.PNG",
       title: "Signed Hearts Shirt",
     },
     {
-      image: "/images/gallery5.PNG",
+      image: "/images/gallery-5.PNG",
       title: "Signed Hibernian Shirt",
     },
     {
-      image: "/images/gallery6.PNG",
+      image: "/images/gallery-6.PNG",
       title: "Captain Display Frame",
     },
     {
-      image: "/images/gallery7.PNG",
+      image: "/images/gallery-7.PNG",
       title: "Lawrence Shankland Signed Shirt",
     },
     {
-      image: "/images/gallery8.PNG",
+      image: "/images/gallery-9.PNG",
       title: "Manchester City Treble Winners Shirt",
     },
   ];
