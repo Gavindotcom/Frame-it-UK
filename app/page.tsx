@@ -1,5 +1,12 @@
 export default function Home() {
   return (
+    <a
+  href="https://wa.me/447464768508"
+  className="whatsapp"
+  target="_blank"
+>
+  WhatsApp
+</a>
     <main className="site">
       <nav className="nav">
         <div className="logo">FRAME IT UK</div>
