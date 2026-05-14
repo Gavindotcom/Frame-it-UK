@@ -94,10 +94,10 @@ export default function Services() {
     </a>
 
     <a
-  href="/sports-memorabilia-framing-edinburgh"
-  className="secondary"
+     href="/sports-memorabilia-framing-edinburgh"
+     className="secondary"
 >
-  Memorabilia Framing Edinburgh
+     Memorabilia Framing Edinburgh
 </a>
     
     <a
