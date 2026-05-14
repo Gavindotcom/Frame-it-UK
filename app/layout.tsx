@@ -4,11 +4,30 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Frame It UK | Bespoke Sports Memorabilia Framing",
+  title: "Frame It UK | Bespoke Football Shirt Framing Scotland",
+
   description:
-    "Premium football shirt and sports memorabilia framing in Scotland. Bespoke framing for signed shirts, match-worn memorabilia, medals and presentation displays.",
+    "Premium football shirt framing and sports memorabilia displays in Scotland. Signed shirts, match-worn memorabilia, medals and custom presentation frames.",
+
   icons: {
     icon: "/images/Icon.PNG",
+  },
+
+  openGraph: {
+    title: "Frame It UK",
+    description:
+      "Premium sports memorabilia framing in Scotland.",
+    url: "https://frame-it-uk.com",
+    siteName: "Frame It UK",
+    images: [
+      {
+        url: "/images/social-preview.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
   },
 };
 
