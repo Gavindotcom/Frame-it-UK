@@ -110,26 +110,7 @@ export default function About() {
         </a>
       </section>
 
-      <footer className="footer">
-        <div>
-          <h3>FRAME IT UK</h3>
-
-          <p>
-            Bespoke sports memorabilia framing based in Scotland.
-          </p>
-        </div>
-
-        <div className="footerLinks">
-          <a href="/">Home</a>
-          <a href="/services">Services</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/contact">Contact</a>
-        </div>
-
-        <div className="footerSmall">
-          © 2026 Frame It UK. All rights reserved.
-        </div>
-      </footer>
+      
 
     </main>
   );
