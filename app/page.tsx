@@ -14,6 +14,7 @@ export default function Home() {
           <a href="/gallery">Gallery</a>
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
+          <a href="/faq">FAQ</a>
         </div>
 
         <a href="/contact" className="navBtn">
