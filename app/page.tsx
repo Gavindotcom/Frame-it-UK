@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Frame It UK | Bespoke Football Shirt Framing Scotland",
+  description:
+    "Premium football shirt framing and sports memorabilia displays in Scotland. Signed shirts, match-worn memorabilia, medals and custom presentation frames.",
+};
 export default function Home() {
   return (
     <main className="site">
