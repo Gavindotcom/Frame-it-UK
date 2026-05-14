@@ -3,10 +3,7 @@ export default function Footer() {
     <footer className="footer">
       <div>
         <h3>FRAME IT UK</h3>
-
-        <p>
-          Bespoke sports memorabilia framing based in Scotland.
-        </p>
+        <p>Bespoke sports memorabilia framing based in Scotland.</p>
       </div>
 
       <div className="footerLinks">
@@ -18,7 +15,6 @@ export default function Footer() {
       </div>
 
       <div className="footerLinks">
-
         <a
           href="https://www.instagram.com/fram3_it?igsh=MWkzYXRtaWdqYWNlMw=="
           target="_blank"
@@ -39,7 +35,6 @@ export default function Footer() {
         >
           WhatsApp
         </a>
-
       </div>
 
       <p className="footerSmall">
