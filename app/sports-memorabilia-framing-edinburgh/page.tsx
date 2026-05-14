@@ -1,9 +1,3 @@
-export const metadata = {
-  title: "Sports Memorabilia Framing Edinburgh | Frame It UK",
-  description:
-    "Bespoke sports memorabilia framing in Edinburgh and Scotland. Premium framing for football shirts, signed memorabilia, medals, gloves and presentation displays.",
-};
-
 export default function SportsMemorabiliaFramingEdinburgh() {
   return (
     <main className="site">
@@ -24,38 +18,56 @@ export default function SportsMemorabiliaFramingEdinburgh() {
       </nav>
 
       <section className="section">
-        <p className="eyebrow">Sports Memorabilia Framing Edinburgh</p>
+        <p className="eyebrow">
+          Sports Memorabilia Framing Edinburgh
+        </p>
 
-        <h1>Premium framing for sporting memories.</h1>
+        <h1>
+          Premium framing for sporting memories.
+        </h1>
 
         <p className="sub">
-          Frame It UK creates bespoke sports memorabilia displays for customers
-          across Edinburgh, Scotland and the UK.
+          Frame It UK creates bespoke sports memorabilia displays
+          for customers across Edinburgh, Scotland and the UK.
         </p>
       </section>
 
       <section className="section">
         <div className="grid">
+
           <div className="card">
             <h3>Football Shirts</h3>
-            <p>Signed shirts, match-worn kits and club presentation pieces.</p>
+
+            <p>
+              Signed shirts, match-worn kits and presentation displays.
+            </p>
           </div>
 
           <div className="card">
             <h3>Signed Memorabilia</h3>
-            <p>Photos, gloves, boots, programmes, medals and collector items.</p>
+
+            <p>
+              Gloves, medals, boots, photos and collector pieces.
+            </p>
           </div>
 
           <div className="card">
-            <h3>Bespoke Displays</h3>
-            <p>Custom layouts, mount colours, plaques, photos and extras.</p>
+            <h3>Bespoke Layouts</h3>
+
+            <p>
+              Premium custom framing designed around your item.
+            </p>
           </div>
+
         </div>
       </section>
 
       <section className="cta">
         <h2>Start your bespoke frame.</h2>
-        <p>Upload a photo and we’ll recommend the best display option.</p>
+
+        <p>
+          Upload a photo and we’ll recommend the best display.
+        </p>
 
         <a href="/contact" className="primary">
           Build Your Quote
