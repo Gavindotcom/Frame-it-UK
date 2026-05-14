@@ -15,32 +15,18 @@ export default function Footer() {
       </div>
 
       <div className="footerLinks">
+        <a href="https://www.instagram.com/fram3_it" target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
 
-  <a
-    href="https://www.instagram.com/fram3_it?igsh=MWkzYXRtaWdqYWNlMw=="
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Instagram
-  </a>
+        <a href="https://www.facebook.com/share/1EDtE1bXL7/" target="_blank" rel="noopener noreferrer">
+          Facebook
+        </a>
 
-  <a
-    href="https://www.facebook.com/share/1EDtE1bXL7/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Facebook
-  </a>
-
-  <a
-    href="https://wa.me/447464768508"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    WhatsApp
-  </a>
-
-</div>
+        <a href="https://wa.me/447464768508" target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      </div>
 
       <p className="footerSmall">
         © 2026 Frame It UK. Premium memorabilia framing.
