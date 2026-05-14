@@ -1,7 +1,6 @@
 export default function Footer() {
   return (
     <footer className="footer">
-
       <div>
         <h3>FRAME IT UK</h3>
 
@@ -19,6 +18,7 @@ export default function Footer() {
       </div>
 
       <div className="footerLinks">
+
         <a
           href="https://www.instagram.com/fram3_it?igsh=MWkzYXRtaWdqYWNlMw=="
           target="_blank"
@@ -39,12 +39,12 @@ export default function Footer() {
         >
           WhatsApp
         </a>
+
       </div>
 
-      <div className="footerSmall">
+      <p className="footerSmall">
         © 2026 Frame It UK. All rights reserved.
-      </div>
-
+      </p>
     </footer>
   );
 }
