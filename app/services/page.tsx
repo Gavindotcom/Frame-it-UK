@@ -81,25 +81,19 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="cta">
-  <h2>Framing starts from £75</h2>
+     <section className="cta">
+  <h2>Framing starts from £70</h2>
 
   <p>
     Send us a photo of your item and we’ll recommend the best display option.
   </p>
 
   <div className="heroButtons">
+
     <a href="/contact" className="primary">
       Get a Quote
     </a>
 
-    <a
-     href="/sports-memorabilia-framing-edinburgh"
-     className="secondary"
->
-     Memorabilia Framing Edinburgh
-</a>
-    
     <a
       href="/football-shirt-framing-scotland"
       className="secondary"
@@ -113,6 +107,14 @@ export default function Services() {
     >
       Signed Football Shirt Framing
     </a>
+
+    <a
+      href="/sports-memorabilia-framing-edinburgh"
+      className="secondary"
+    >
+      Memorabilia Framing Edinburgh
+    </a>
+
   </div>
 </section>
     </main>
