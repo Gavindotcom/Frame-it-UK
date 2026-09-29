@@ -53,7 +53,7 @@ const recentWork: WorkItem[] = [
     position: "50% 50%",
   },
   {
-    src: "/images/work/dinamo.webp",
+    src: "/images/work/mull.jpg.jpg",
     title: "Dinamo Zagreb",
     subtitle: "Custom Mount Design",
     position: "50% 39%",
