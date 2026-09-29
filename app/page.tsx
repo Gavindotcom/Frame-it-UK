@@ -54,7 +54,7 @@ const recentWork: WorkItem[] = [
   },
   {
     src: "/images/work/mull.jpg.jpg",
-    title: "Dinamo Zagreb",
+    title: "Mulligan",
     subtitle: "Custom Mount Design",
     position: "50% 39%",
   },
@@ -85,7 +85,7 @@ const designs: DesignItem[] = [
     position: "50% 25%",
   },
   {
-    src: "/images/work/dinamo.webp",
+    src: "/images/work/mull.jpg.jpg",
     title: "Special Presentation Frame",
     copy: "Custom mounts, club colours and presentation details.",
     position: "50% 41%",
