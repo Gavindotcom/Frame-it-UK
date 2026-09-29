@@ -91,7 +91,7 @@ const designs: DesignItem[] = [
     position: "50% 41%",
   },
   {
-    src: "/images/work/Double.jpeg.jpg",
+    src: "/images/work/Double.jpeg.png",
     title: "Double Shirt Frame",
     copy: "Two shirts brought together in one statement display.",
     position: "50% 50%",
