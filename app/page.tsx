@@ -79,7 +79,7 @@ const designs: DesignItem[] = [
     position: "50% 55%",
   },
   {
-    src: "/images/work/aasgaard.webp",
+    src: "/images/work/aasgaard-hero.jpeg.jpg",
     title: "Custom Artwork Frame",
     copy: "Bespoke artwork designed around your shirt and the moment.",
     position: "50% 25%",
