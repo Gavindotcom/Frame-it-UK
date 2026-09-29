@@ -7,9 +7,15 @@
   --line: #d8d5ce;
   --black: #0d0d0c;
   --green: #20b35b;
+
   --serif: Georgia, "Times New Roman", serif;
   --sans: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
 }
+
+
+/* =========================
+   GLOBAL
+========================= */
 
 * {
   box-sizing: border-box;
@@ -32,22 +38,37 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 .siteHeader {
   position: sticky;
   top: 0;
   z-index: 50;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   min-height: 72px;
+
   padding: 0 5vw;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
+
+  background: rgba(247, 245, 241, 0.94);
+
   border-bottom: 1px solid rgba(17, 17, 15, 0.08);
+
   backdrop-filter: blur(16px);
 }
 
@@ -60,6 +81,7 @@ a {
 .nav {
   display: flex;
   gap: clamp(1.1rem, 3vw, 2.6rem);
+
   font-size: 0.83rem;
 }
 
@@ -77,10 +99,19 @@ a {
   opacity: 0.55;
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   min-height: calc(100svh - 72px);
+
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
   background: var(--paper);
 }
 
@@ -88,15 +119,21 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 6vw, 7rem);
+
+  padding:
+    clamp(4rem, 8vw, 8rem)
+    clamp(2rem, 6vw, 7rem);
 }
 
 .eyebrow {
   margin: 0 0 1rem;
+
   font-size: 0.72rem;
   font-weight: 700;
+
   letter-spacing: 0.18em;
   text-transform: uppercase;
+
   color: var(--muted);
 }
 
@@ -111,39 +148,62 @@ a {
 
 .hero h1 {
   margin: 0;
+
   max-width: 720px;
+
   font-size: clamp(3.5rem, 7.2vw, 7.4rem);
+
   line-height: 0.91;
+
   letter-spacing: -0.055em;
 }
 
 .heroText {
   max-width: 520px;
+
   margin: 2rem 0 0;
+
   color: var(--muted);
+
   font-family: var(--serif);
+
   font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+
   line-height: 1.5;
 }
+
+
+/* HERO BUTTONS */
 
 .buttonRow {
   display: flex;
   flex-wrap: wrap;
+
   gap: 0.8rem;
+
   margin-top: 2rem;
 }
 
 .button {
   min-height: 48px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 0.65rem;
+
   padding: 0 1.35rem;
+
   border: 1px solid var(--black);
+
   font-size: 0.84rem;
   font-weight: 700;
-  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
 }
 
 .button:hover {
@@ -159,22 +219,37 @@ a {
   background: transparent;
 }
 
+
+/* HERO BENEFITS */
+
 .benefits {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
   gap: 1.2rem;
+
   max-width: 590px;
+
   margin-top: 3.5rem;
+
   padding-top: 1.5rem;
+
   border-top: 1px solid var(--line);
 }
 
 .benefits > div {
   display: flex;
+
   gap: 0.7rem;
+
   align-items: flex-start;
+
   color: #3e3d39;
+
   font-size: 0.76rem;
+
   line-height: 1.35;
 }
 
@@ -183,35 +258,48 @@ a {
   line-height: 1;
 }
 
+
+/* HERO IMAGE */
+
 .heroVisual {
   position: relative;
-  min-height: 720px;
-  overflow: hidden;
-  background: #d9d2c8;
-}
 
-.heroVisual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(247, 245, 241, 0.08), transparent 20%);
+  min-height: 720px;
+
+  overflow: hidden;
+
+  background: #d9d2c8;
 }
 
 .heroImage {
   object-fit: cover;
-  object-position: 50% 23%;
+
+  /*
+  New portrait Aasgaard image.
+  This keeps the frame central.
+  */
+  object-position: 50% 50%;
 }
 
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
 .section {
-  padding: clamp(4.5rem, 7vw, 7.5rem) 5vw;
+  padding:
+    clamp(4.5rem, 7vw, 7.5rem)
+    5vw;
 }
 
 .sectionHeading {
   display: flex;
+
   align-items: end;
   justify-content: space-between;
+
   gap: 2rem;
+
   margin-bottom: 2.2rem;
 }
 
@@ -221,11 +309,19 @@ a {
 
 .sectionHeadingLine::after {
   content: "";
+
   flex: 1;
   order: 1;
+
   min-width: 60px;
+
   height: 1px;
-  margin: 0 1.2rem 0.55rem;
+
+  margin:
+    0
+    1.2rem
+    0.55rem;
+
   background: var(--line);
 }
 
@@ -235,38 +331,64 @@ a {
 
 .sectionHeading > a {
   order: 2;
+
   margin-bottom: 0.2rem;
+
   white-space: nowrap;
+
   font-size: 0.75rem;
+
   text-transform: uppercase;
+
   letter-spacing: 0.08em;
 }
 
 .section h2,
 .centerHeading h2 {
   margin: 0;
-  font-size: clamp(2.3rem, 4vw, 4.4rem);
+
+  font-size:
+    clamp(2.3rem, 4vw, 4.4rem);
+
   line-height: 1;
+
   letter-spacing: -0.04em;
 }
 
+
+/* =========================
+   RECENT WORK
+========================= */
+
 .recentGrid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(0.75rem, 1.4vw, 1.5rem);
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap:
+    clamp(0.75rem, 1.4vw, 1.5rem);
 }
 
 .workCard h3,
 .miniCard h3 {
-  margin: 0.9rem 0 0.25rem;
+  margin:
+    0.9rem
+    0
+    0.25rem;
+
   font-family: var(--serif);
+
   font-size: 1rem;
+
   font-weight: 400;
 }
 
 .workCard p {
   margin: 0;
+
   color: var(--muted);
+
   font-size: 0.74rem;
 }
 
@@ -274,7 +396,9 @@ a {
 .designImageWrap,
 .miniImageWrap {
   position: relative;
+
   overflow: hidden;
+
   background: #e5e1da;
 }
 
@@ -284,7 +408,11 @@ a {
 
 .workImage {
   object-fit: cover;
-  transition: transform 500ms cubic-bezier(.2,.7,.2,1);
+
+  transition:
+    transform
+    500ms
+    cubic-bezier(.2,.7,.2,1);
 }
 
 .workCard:hover .workImage,
@@ -293,26 +421,45 @@ a {
   transform: scale(1.035);
 }
 
+
+/* =========================
+   DESIGN OPTIONS
+========================= */
+
 .designsSection {
   background: #fbfaf7;
 }
 
 .centerHeading {
   max-width: 800px;
-  margin: 0 auto 3rem;
+
+  margin:
+    0
+    auto
+    3rem;
+
   text-align: center;
 }
 
 .centerHeading > p:last-child {
-  margin: 1rem auto 0;
+  margin:
+    1rem
+    auto
+    0;
+
   color: var(--muted);
+
   font-family: var(--serif);
+
   font-size: 1.05rem;
 }
 
 .designGrid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
   gap: 1rem;
 }
 
@@ -325,92 +472,139 @@ a {
 }
 
 .designCopy {
-  padding: 1rem 0.15rem 0;
+  padding:
+    1rem
+    0.15rem
+    0;
 }
 
 .designCopy h3 {
   margin: 0;
+
   font-family: var(--serif);
+
   font-size: 1rem;
+
   font-weight: 400;
 }
 
 .designCopy p {
-  margin: 0.45rem 0 0;
+  margin:
+    0.45rem
+    0
+    0;
+
   color: var(--muted);
+
   font-size: 0.74rem;
+
   line-height: 1.45;
 }
 
-.doubleImage {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100%;
-  gap: 3px;
-  background: #f0ede7;
-}
 
-.doublePane {
-  position: relative;
-  min-width: 0;
-  overflow: hidden;
-}
+/* =========================
+   MADE FOR YOU
+========================= */
 
 .madeForYou {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.15fr);
+
   min-height: 600px;
+
   background: var(--paper-deep);
 }
 
 .madeCopy {
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
-  padding: clamp(4rem, 7vw, 7rem) clamp(2rem, 6vw, 6rem);
+
+  padding:
+    clamp(4rem, 7vw, 7rem)
+    clamp(2rem, 6vw, 6rem);
 }
 
 .madeCopy h2 {
   margin: 0;
-  font-size: clamp(2.6rem, 4.4vw, 5.2rem);
+
+  font-size:
+    clamp(2.6rem, 4.4vw, 5.2rem);
+
   line-height: 0.98;
+
   letter-spacing: -0.05em;
 }
 
 .madeCopy > p:not(.eyebrow) {
   max-width: 620px;
-  margin: 1.6rem 0 0;
+
+  margin:
+    1.6rem
+    0
+    0;
+
   color: var(--muted);
+
   font-family: var(--serif);
+
   font-size: 1.05rem;
+
   line-height: 1.55;
 }
 
 .textLink {
   align-self: flex-start;
+
   margin-top: 2rem;
+
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid currentColor;
+
+  border-bottom:
+    1px solid
+    currentColor;
+
   font-size: 0.8rem;
+
   text-transform: uppercase;
+
   letter-spacing: 0.09em;
 }
 
 .madeVisual {
   position: relative;
+
   min-height: 520px;
+
   overflow: hidden;
 }
 
 .madeImage {
   object-fit: cover;
+
   object-position: 50% 39%;
-  filter: saturate(0.82) contrast(1.03);
+
+  filter:
+    saturate(0.82)
+    contrast(1.03);
 }
+
+
+/* =========================
+   MORE WORK
+========================= */
 
 .moreGrid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
   gap: 0.9rem;
 }
 
@@ -418,29 +612,55 @@ a {
   aspect-ratio: 0.8;
 }
 
+
+/* =========================
+   QUOTE
+========================= */
+
 .quoteSection {
-  padding: clamp(5rem, 8vw, 8rem) 5vw;
+  padding:
+    clamp(5rem, 8vw, 8rem)
+    5vw;
+
   text-align: center;
+
   color: white;
+
   background:
-    linear-gradient(rgba(8, 8, 7, 0.82), rgba(8, 8, 7, 0.92)),
-    url("/work/mcginn.webp") center 45% / cover no-repeat;
+    linear-gradient(
+      rgba(8, 8, 7, 0.82),
+      rgba(8, 8, 7, 0.92)
+    ),
+    url("/images/work/mcginn.webp")
+    center 45% / cover
+    no-repeat;
 }
 
 .lightEyebrow {
-  color: rgba(255,255,255,0.62);
+  color:
+    rgba(255,255,255,0.62);
 }
 
 .quoteSection h2 {
   margin: 0;
-  font-size: clamp(3rem, 6vw, 6rem);
+
+  font-size:
+    clamp(3rem, 6vw, 6rem);
+
   letter-spacing: -0.05em;
 }
 
 .quoteSection > p:not(.eyebrow) {
-  margin: 0.9rem 0 0;
-  color: rgba(255,255,255,0.7);
+  margin:
+    0.9rem
+    0
+    0;
+
+  color:
+    rgba(255,255,255,0.7);
+
   font-family: var(--serif);
+
   font-size: 1.1rem;
 }
 
@@ -450,38 +670,62 @@ a {
 
 .whatsappButton {
   border-color: var(--green);
+
   color: #fff;
+
   background: var(--green);
 }
 
 .quoteOutline {
-  border-color: rgba(255,255,255,0.75);
+  border-color:
+    rgba(255,255,255,0.75);
+
   color: white;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+
+  grid-template-columns:
+    1fr
+    auto
+    auto;
+
   align-items: end;
+
   gap: 2rem;
-  padding: 2rem 5vw;
+
+  padding:
+    2rem
+    5vw;
+
   background: #fbfaf7;
 }
 
 .footerBrand {
   display: inline-block;
+
   margin-bottom: 0.4rem;
 }
 
 .footer p {
   margin: 0;
+
   color: var(--muted);
+
   font-size: 0.72rem;
 }
 
 .footerLinks {
   display: flex;
+
   gap: 1.3rem;
+
   font-size: 0.74rem;
 }
 
@@ -489,17 +733,27 @@ a {
   white-space: nowrap;
 }
 
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1180px) {
+
   .hero {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr
+      1fr;
   }
 
   .hero h1 {
-    font-size: clamp(3.3rem, 6.2vw, 5.8rem);
+    font-size:
+      clamp(3.3rem, 6.2vw, 5.8rem);
   }
 
   .benefits {
     grid-template-columns: 1fr;
+
     gap: 0.7rem;
   }
 
@@ -508,66 +762,94 @@ a {
   }
 
   .recentGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 
   .designGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
     row-gap: 2.5rem;
   }
 
   .moreGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
+
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 760px) {
+
   .siteHeader {
     min-height: 62px;
+
     padding-inline: 1.2rem;
   }
 
   .brand {
     font-size: 0.82rem;
+
     letter-spacing: 0.2em;
   }
 
   .nav {
     gap: 1rem;
+
     font-size: 0.72rem;
   }
 
+
+  /* HERO */
+
   .hero {
     grid-template-columns: 1fr;
+
     min-height: auto;
   }
 
   .heroCopy {
-    padding: 4.5rem 1.25rem 3rem;
+    padding:
+      4.5rem
+      1.25rem
+      3rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.35rem, 15vw, 5.1rem);
+    font-size:
+      clamp(3.35rem, 15vw, 5.1rem);
   }
 
   .heroText {
     margin-top: 1.5rem;
+
     font-size: 1.06rem;
   }
 
   .benefits {
     margin-top: 2.4rem;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
     gap: 0.6rem;
   }
 
   .benefits > div {
     display: block;
+
     font-size: 0.68rem;
   }
 
   .benefitIcon {
     display: block;
+
     margin-bottom: 0.45rem;
   }
 
@@ -575,8 +857,19 @@ a {
     min-height: 72svh;
   }
 
+  .heroImage {
+    object-position:
+      50%
+      50%;
+  }
+
+
+  /* SECTIONS */
+
   .section {
-    padding: 4.25rem 1.25rem;
+    padding:
+      4.25rem
+      1.25rem;
   }
 
   .sectionHeading {
@@ -596,15 +889,28 @@ a {
     font-size: 2.65rem;
   }
 
+
+  /* RECENT WORK */
+
   .recentGrid {
     display: grid;
+
     grid-auto-flow: column;
+
     grid-auto-columns: 72%;
+
     grid-template-columns: none;
+
     overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
+
+    overscroll-behavior-inline:
+      contain;
+
+    scroll-snap-type:
+      inline mandatory;
+
     gap: 0.85rem;
+
     padding-bottom: 0.8rem;
   }
 
@@ -612,13 +918,20 @@ a {
     scroll-snap-align: start;
   }
 
+
+  /* DESIGN OPTIONS */
+
   .centerHeading {
     margin-bottom: 2.2rem;
   }
 
   .designGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem 0.75rem;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      1.5rem
+      0.75rem;
   }
 
   .designCopy h3 {
@@ -629,12 +942,17 @@ a {
     font-size: 0.7rem;
   }
 
+
+  /* MADE FOR YOU */
+
   .madeForYou {
     grid-template-columns: 1fr;
   }
 
   .madeCopy {
-    padding: 4.5rem 1.25rem;
+    padding:
+      4.5rem
+      1.25rem;
   }
 
   .madeCopy h2 {
@@ -645,32 +963,59 @@ a {
     min-height: 52svh;
   }
 
+
+  /* MORE WORK */
+
   .moreGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem 0.75rem;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      1.2rem
+      0.75rem;
   }
 
+
+  /* QUOTE */
+
   .quoteSection {
-    padding: 5.5rem 1.25rem;
+    padding:
+      5.5rem
+      1.25rem;
   }
 
   .quoteSection h2 {
     font-size: 3.5rem;
   }
 
+
+  /* FOOTER */
+
   .footer {
     grid-template-columns: 1fr;
+
     align-items: start;
+
     gap: 1.4rem;
-    padding: 2.25rem 1.25rem;
+
+    padding:
+      2.25rem
+      1.25rem;
   }
 
   .footerLinks {
     flex-wrap: wrap;
   }
+
 }
 
+
+/* =========================
+   SMALL PHONES
+========================= */
+
 @media (max-width: 420px) {
+
   .nav a:nth-child(2) {
     display: none;
   }
@@ -680,6 +1025,10 @@ a {
   }
 
   .benefits {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:
+      1fr
+      1fr
+      1fr;
   }
+
 }
