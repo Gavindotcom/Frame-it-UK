@@ -1,112 +1,130 @@
 import Image from "next/image";
 
+type WorkItem = {
+  src: string;
+  title: string;
+  subtitle?: string;
+  position?: string;
+};
+
+type DesignItem = {
+  title: string;
+  copy: string;
+  src?: string;
+  position?: string;
+  double?: [string, string];
+};
+
 const whatsappBase = "https://wa.me/447464768508";
 
 const quoteMessage = encodeURIComponent(
-  "Hi Frame It UK, I’d like a quote for a bespoke frame."
+  "Hi Frame It UK, I'd like a quote for a bespoke frame."
 );
 
 const quoteHref = `${whatsappBase}?text=${quoteMessage}`;
 
-const recentWork = [
+const recentWork: WorkItem[] = [
   {
-    src: "/work/brazil.webp",
+    src: "/images/work/brazil.webp",
     title: "Brazil National Team",
-    subtitle: "Signed shirt",
+    subtitle: "Signed Shirt",
     position: "50% 46%",
   },
   {
-    src: "/work/kerr.webp",
+    src: "/images/work/kerr.webp",
     title: "Kerr",
-    subtitle: "Presentation frame",
+    subtitle: "Presentation Frame",
     position: "50% 50%",
   },
   {
-    src: "/work/mcginn.webp",
+    src: "/images/work/mcginn.webp",
     title: "McGinn",
-    subtitle: "Signed shirt with photos",
+    subtitle: "Signed Shirt with Photos",
     position: "50% 54%",
   },
   {
-    src: "/work/celtic.webp",
+    src: "/images/work/celtic.webp",
     title: "Celtic FC",
-    subtitle: "Multi-signed shirt",
+    subtitle: "Multi-Signed Shirt",
     position: "50% 50%",
   },
   {
-    src: "/work/dinamo.webp",
+    src: "/images/work/dinamo.webp",
     title: "Dinamo Zagreb",
-    subtitle: "Custom mount design",
+    subtitle: "Custom Mount Design",
     position: "50% 39%",
   },
 ];
 
-const designs = [
+const designs: DesignItem[] = [
   {
-    src: "/work/brazil.webp",
+    src: "/images/work/brazil.webp",
     title: "Classic Shirt Frame",
-    copy: "A clean, timeless layout that keeps the shirt at the centre.",
+    copy: "A clean, timeless layout that keeps your shirt at the centre.",
     position: "50% 45%",
   },
   {
-    src: "/work/mcginn.webp",
+    src: "/images/work/mcginn.webp",
     title: "Photo Display",
     copy: "Add personal photos and a plaque to tell the full story.",
     position: "50% 55%",
   },
   {
-    src: "/work/aasgaard.webp",
+    src: "/images/work/aasgaard.webp",
     title: "Custom Artwork Frame",
-    copy: "Bespoke artwork designed around the shirt and the moment.",
+    copy: "Bespoke artwork designed around your shirt and the moment.",
     position: "50% 22%",
   },
   {
-    src: "/work/dinamo.webp",
+    src: "/images/work/dinamo.webp",
     title: "Special Presentation Frame",
     copy: "Custom mounts, club colours and presentation details.",
     position: "50% 41%",
   },
   {
     title: "Double Shirt Frame",
-    copy: "Two shirts together in one statement display.",
-    double: ["/work/kerr.webp", "/work/celtic.webp"],
+    copy: "Two shirts brought together in one statement display.",
+    double: [
+      "/images/work/kerr.webp",
+      "/images/work/celtic.webp",
+    ],
   },
   {
-    src: "/work/pat-stanton.webp",
+    src: "/images/work/pat-stanton.webp",
     title: "Fully Bespoke",
     copy: "Built around your item, your story and your ideas.",
     position: "50% 52%",
   },
 ];
 
-const moreWork = [
+const moreWork: WorkItem[] = [
   {
-    src: "/work/stevenson.webp",
+    src: "/images/work/stevenson.webp",
     title: "Stevenson",
     position: "50% 50%",
   },
   {
-    src: "/work/pat-stanton.webp",
+    src: "/images/work/pat-stanton.webp",
     title: "Pat Stanton",
     position: "50% 53%",
   },
   {
-    src: "/work/dinamo.webp",
+    src: "/images/work/dinamo.webp",
     title: "Dinamo Zagreb",
     position: "50% 41%",
   },
   {
-    src: "/work/brazil.webp",
+    src: "/images/work/brazil.webp",
     title: "Brazil",
     position: "50% 46%",
   },
   {
-    src: "/work/kerr-alt.webp",
+    src: "/images/work/kerr-alt.webp",
     title: "Kerr",
     position: "50% 50%",
   },
   {
-    src: "/work/mcginn-alt.webp",
+    src: "/images/work/mcginn-alt.webp",
     title: "McGinn",
     position: "50% 47%",
   },
@@ -115,19 +133,39 @@ const moreWork = [
 export default function HomePage() {
   return (
     <main>
+      {/* HEADER */}
       <header className="siteHeader">
-        <a className="brand" href="#top" aria-label="Frame It UK home">
+        <a
+          className="brand"
+          href="#top"
+          aria-label="Frame It UK home"
+        >
           FRAME IT UK
         </a>
 
-        <nav className="nav" aria-label="Main navigation">
-          <a href="#designs">Designs</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#quote">Quote</a>
+        <nav
+          className="nav"
+          aria-label="Main navigation"
+        >
+          <a href="#designs">
+            Designs
+          </a>
+
+          <a href="#gallery">
+            Gallery
+          </a>
+
+          <a href="#quote">
+            Quote
+          </a>
         </nav>
       </header>
 
-      <section className="hero" id="top">
+      {/* HERO */}
+      <section
+        className="hero"
+        id="top"
+      >
         <div className="heroCopy">
           <p className="eyebrow">
             Bespoke sports memorabilia framing
@@ -152,7 +190,9 @@ export default function HomePage() {
               href="#designs"
             >
               View Designs
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">
+                →
+              </span>
             </a>
 
             <a
@@ -221,7 +261,7 @@ export default function HomePage() {
           aria-label="Custom artwork frame example"
         >
           <Image
-            src="/work/aasgaard.webp"
+            src="/images/work/aasgaard.webp"
             alt="Custom framed Aasgaard football shirt with bespoke artwork background"
             fill
             priority
@@ -231,6 +271,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* RECENT WORK */}
       <section
         className="section"
         id="gallery"
@@ -247,8 +288,10 @@ export default function HomePage() {
           </div>
 
           <a href="#more-work">
-            View more
-            <span aria-hidden="true">→</span>
+            View More
+            <span aria-hidden="true">
+              →
+            </span>
           </a>
         </div>
 
@@ -263,7 +306,7 @@ export default function HomePage() {
                   src={item.src}
                   alt={`${item.title} framed by Frame It UK`}
                   fill
-                  sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 20vw"
+                  sizes="(max-width: 700px) 70vw, (max-width: 1100px) 33vw, 20vw"
                   className="workImage"
                   style={{
                     objectPosition: item.position,
@@ -275,14 +318,17 @@ export default function HomePage() {
                 {item.title}
               </h3>
 
-              <p>
-                {item.subtitle}
-              </p>
+              {item.subtitle && (
+                <p>
+                  {item.subtitle}
+                </p>
+              )}
             </article>
           ))}
         </div>
       </section>
 
+      {/* CHOOSE YOUR DESIGN */}
       <section
         className="section designsSection"
         id="designs"
@@ -321,8 +367,8 @@ export default function HomePage() {
                             src={src}
                             alt={
                               index === 0
-                                ? "First framed shirt"
-                                : "Second framed shirt"
+                                ? "First framed football shirt"
+                                : "Second framed football shirt"
                             }
                             fill
                             sizes="(max-width: 700px) 35vw, 12vw"
@@ -360,6 +406,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* MADE FOR YOU */}
       <section className="madeForYou">
         <div className="madeCopy">
           <p className="eyebrow">
@@ -375,8 +422,9 @@ export default function HomePage() {
           <p>
             Every frame is designed around your shirt and
             your story. From signed shirts and match-worn
-            kits to photos, plaques and bespoke artwork,
-            we create a display that feels personal to you.
+            kits to photographs, plaques and bespoke
+            artwork, we create a display that feels
+            personal to you.
           </p>
 
           <a
@@ -384,13 +432,15 @@ export default function HomePage() {
             href="#designs"
           >
             Explore the designs
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true">
+              →
+            </span>
           </a>
         </div>
 
         <div className="madeVisual">
           <Image
-            src="/work/mcginn-alt.webp"
+            src="/images/work/mcginn-alt.webp"
             alt="Close detail of a McGinn framed football shirt"
             fill
             sizes="(max-width: 900px) 100vw, 55vw"
@@ -399,6 +449,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* MORE WORK */}
       <section
         className="section"
         id="more-work"
@@ -419,8 +470,10 @@ export default function HomePage() {
             target="_blank"
             rel="noreferrer"
           >
-            Start your frame
-            <span aria-hidden="true">→</span>
+            Start Your Frame
+            <span aria-hidden="true">
+              →
+            </span>
           </a>
         </div>
 
@@ -451,6 +504,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* QUOTE */}
       <section
         className="quoteSection"
         id="quote"
@@ -474,7 +528,9 @@ export default function HomePage() {
             target="_blank"
             rel="noreferrer"
           >
-            <span aria-hidden="true">◉</span>
+            <span aria-hidden="true">
+              ◉
+            </span>
             Chat on WhatsApp
           </a>
 
@@ -489,6 +545,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div>
           <a
@@ -521,7 +578,7 @@ export default function HomePage() {
           </a>
 
           <a
-            href={whatsappBase}
+            href={quoteHref}
             target="_blank"
             rel="noreferrer"
           >
