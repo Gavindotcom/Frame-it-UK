@@ -8,11 +8,10 @@ type WorkItem = {
 };
 
 type DesignItem = {
+  src: string;
   title: string;
   copy: string;
-  src?: string;
   position?: string;
-  double?: [string, string];
 };
 
 const whatsappBase = "https://wa.me/447464768508";
@@ -22,6 +21,11 @@ const quoteMessage = encodeURIComponent(
 );
 
 const quoteHref = `${whatsappBase}?text=${quoteMessage}`;
+
+
+/* -----------------------------
+   RECENT WORK
+------------------------------ */
 
 const recentWork: WorkItem[] = [
   {
@@ -56,6 +60,11 @@ const recentWork: WorkItem[] = [
   },
 ];
 
+
+/* -----------------------------
+   DESIGN OPTIONS
+------------------------------ */
+
 const designs: DesignItem[] = [
   {
     src: "/images/work/brazil.webp",
@@ -73,7 +82,7 @@ const designs: DesignItem[] = [
     src: "/images/work/aasgaard.webp",
     title: "Custom Artwork Frame",
     copy: "Bespoke artwork designed around your shirt and the moment.",
-    position: "50% 22%",
+    position: "50% 25%",
   },
   {
     src: "/images/work/dinamo.webp",
@@ -82,20 +91,23 @@ const designs: DesignItem[] = [
     position: "50% 41%",
   },
   {
+    src: "/images/work/Double.jpeg.jpg",
     title: "Double Shirt Frame",
     copy: "Two shirts brought together in one statement display.",
-    double: [
-      "/images/work/kerr.webp",
-      "/images/work/celtic.webp",
-    ],
+    position: "50% 50%",
   },
   {
-    src: "/images/work/pat-stanton.webp",
+    src: "/images/work/bespoke.jpeg.jpg",
     title: "Fully Bespoke",
-    copy: "Built around your item, your story and your ideas.",
-    position: "50% 52%",
+    copy: "Unique displays built around your item, your story and your ideas.",
+    position: "50% 50%",
   },
 ];
+
+
+/* -----------------------------
+   MORE WORK
+------------------------------ */
 
 const moreWork: WorkItem[] = [
   {
@@ -104,9 +116,9 @@ const moreWork: WorkItem[] = [
     position: "50% 50%",
   },
   {
-    src: "/images/work/pat-stanton.webp",
-    title: "Pat Stanton",
-    position: "50% 53%",
+    src: "/images/work/bespoke.jpeg.jpg",
+    title: "Bespoke Design",
+    position: "50% 50%",
   },
   {
     src: "/images/work/dinamo.webp",
@@ -130,11 +142,17 @@ const moreWork: WorkItem[] = [
   },
 ];
 
+
 export default function HomePage() {
   return (
     <main>
-      {/* HEADER */}
+
+      {/* =============================
+          HEADER
+      ============================== */}
+
       <header className="siteHeader">
+
         <a
           className="brand"
           href="#top"
@@ -159,14 +177,21 @@ export default function HomePage() {
             Quote
           </a>
         </nav>
+
       </header>
 
-      {/* HERO */}
+
+      {/* =============================
+          HERO
+      ============================== */}
+
       <section
         className="hero"
         id="top"
       >
+
         <div className="heroCopy">
+
           <p className="eyebrow">
             Bespoke sports memorabilia framing
           </p>
@@ -184,7 +209,9 @@ export default function HomePage() {
             handmade in Scotland.
           </p>
 
+
           <div className="buttonRow">
+
             <a
               className="button buttonDark"
               href="#designs"
@@ -195,6 +222,7 @@ export default function HomePage() {
               </span>
             </a>
 
+
             <a
               className="button buttonLight"
               href={quoteHref}
@@ -203,12 +231,15 @@ export default function HomePage() {
             >
               Get a Quote
             </a>
+
           </div>
+
 
           <div
             className="benefits"
             aria-label="Frame It UK benefits"
           >
+
             <div>
               <span
                 className="benefitIcon"
@@ -223,6 +254,7 @@ export default function HomePage() {
                 materials
               </span>
             </div>
+
 
             <div>
               <span
@@ -239,6 +271,7 @@ export default function HomePage() {
               </span>
             </div>
 
+
             <div>
               <span
                 className="benefitIcon"
@@ -253,31 +286,47 @@ export default function HomePage() {
                 available
               </span>
             </div>
+
           </div>
+
         </div>
+
+
+        {/* NEW HERO IMAGE */}
 
         <div
           className="heroVisual"
           aria-label="Custom artwork frame example"
         >
+
           <Image
-            src="/images/work/aasgaard.webp"
-            alt="Custom framed Aasgaard football shirt with bespoke artwork background"
+            src="/images/work/assgaard-hero.jpeg.jpg"
+            alt="Framed Aasgaard match worn signed Rangers football shirt"
             fill
             priority
             sizes="(max-width: 900px) 100vw, 50vw"
             className="heroImage"
           />
+
         </div>
+
       </section>
 
-      {/* RECENT WORK */}
+
+
+      {/* =============================
+          RECENT WORK
+      ============================== */}
+
       <section
         className="section"
         id="gallery"
       >
+
         <div className="sectionHeading sectionHeadingLine">
+
           <div>
+
             <p className="eyebrow">
               Portfolio
             </p>
@@ -285,7 +334,9 @@ export default function HomePage() {
             <h2>
               Recent Work
             </h2>
+
           </div>
+
 
           <a href="#more-work">
             View More
@@ -293,15 +344,21 @@ export default function HomePage() {
               →
             </span>
           </a>
+
         </div>
 
+
         <div className="recentGrid">
+
           {recentWork.map((item) => (
+
             <article
               className="workCard"
               key={item.title}
             >
+
               <div className="workImageWrap">
+
                 <Image
                   src={item.src}
                   alt={`${item.title} framed by Frame It UK`}
@@ -312,28 +369,42 @@ export default function HomePage() {
                     objectPosition: item.position,
                   }}
                 />
+
               </div>
+
 
               <h3>
                 {item.title}
               </h3>
+
 
               {item.subtitle && (
                 <p>
                   {item.subtitle}
                 </p>
               )}
+
             </article>
+
           ))}
+
         </div>
+
       </section>
 
-      {/* CHOOSE YOUR DESIGN */}
+
+
+      {/* =============================
+          CHOOSE YOUR DESIGN
+      ============================== */}
+
       <section
         className="section designsSection"
         id="designs"
       >
+
         <div className="centerHeading">
+
           <p className="eyebrow">
             Find your style
           </p>
@@ -346,53 +417,37 @@ export default function HomePage() {
             A range of framing styles to suit your shirt,
             your story and your space.
           </p>
+
         </div>
 
+
         <div className="designGrid">
+
           {designs.map((design) => (
+
             <article
               className="designCard"
               key={design.title}
             >
+
               <div className="designImageWrap">
-                {design.double ? (
-                  <div className="doubleImage">
-                    {design.double.map(
-                      (src, index) => (
-                        <div
-                          className="doublePane"
-                          key={src}
-                        >
-                          <Image
-                            src={src}
-                            alt={
-                              index === 0
-                                ? "First framed football shirt"
-                                : "Second framed football shirt"
-                            }
-                            fill
-                            sizes="(max-width: 700px) 35vw, 12vw"
-                            className="workImage"
-                          />
-                        </div>
-                      )
-                    )}
-                  </div>
-                ) : (
-                  <Image
-                    src={design.src!}
-                    alt={`${design.title} by Frame It UK`}
-                    fill
-                    sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 17vw"
-                    className="workImage"
-                    style={{
-                      objectPosition: design.position,
-                    }}
-                  />
-                )}
+
+                <Image
+                  src={design.src}
+                  alt={`${design.title} by Frame It UK`}
+                  fill
+                  sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 17vw"
+                  className="workImage"
+                  style={{
+                    objectPosition: design.position,
+                  }}
+                />
+
               </div>
 
+
               <div className="designCopy">
+
                 <h3>
                   {design.title}
                 </h3>
@@ -400,18 +455,31 @@ export default function HomePage() {
                 <p>
                   {design.copy}
                 </p>
+
               </div>
+
             </article>
+
           ))}
+
         </div>
+
       </section>
 
-      {/* MADE FOR YOU */}
+
+
+      {/* =============================
+          MADE FOR YOU
+      ============================== */}
+
       <section className="madeForYou">
+
         <div className="madeCopy">
+
           <p className="eyebrow">
             Made for you
           </p>
+
 
           <h2>
             Individually designed.
@@ -419,13 +487,15 @@ export default function HomePage() {
             Handmade in Scotland.
           </h2>
 
+
           <p>
             Every frame is designed around your shirt and
             your story. From signed shirts and match-worn
-            kits to photographs, plaques and bespoke
-            artwork, we create a display that feels
+            kits to photographs, plaques, custom mounts and
+            bespoke artwork, we create a display that feels
             personal to you.
           </p>
+
 
           <a
             className="textLink"
@@ -436,26 +506,39 @@ export default function HomePage() {
               →
             </span>
           </a>
+
         </div>
 
+
         <div className="madeVisual">
+
           <Image
             src="/images/work/mcginn-alt.webp"
-            alt="Close detail of a McGinn framed football shirt"
+            alt="Close detail of bespoke football shirt framing"
             fill
             sizes="(max-width: 900px) 100vw, 55vw"
             className="madeImage"
           />
+
         </div>
+
       </section>
 
-      {/* MORE WORK */}
+
+
+      {/* =============================
+          MORE OF OUR WORK
+      ============================== */}
+
       <section
         className="section"
         id="more-work"
       >
+
         <div className="sectionHeading sectionHeadingLine">
+
           <div>
+
             <p className="eyebrow">
               More examples
             </p>
@@ -463,7 +546,9 @@ export default function HomePage() {
             <h2>
               More of Our Work
             </h2>
+
           </div>
+
 
           <a
             href={quoteHref}
@@ -475,15 +560,21 @@ export default function HomePage() {
               →
             </span>
           </a>
+
         </div>
 
+
         <div className="moreGrid">
+
           {moreWork.map((item) => (
+
             <article
               className="miniCard"
               key={item.title}
             >
+
               <div className="miniImageWrap">
+
                 <Image
                   src={item.src}
                   alt={`${item.title} framing example`}
@@ -494,45 +585,59 @@ export default function HomePage() {
                     objectPosition: item.position,
                   }}
                 />
+
               </div>
+
 
               <h3>
                 {item.title}
               </h3>
+
             </article>
+
           ))}
+
         </div>
+
       </section>
 
-      {/* QUOTE */}
+
+
+      {/* =============================
+          QUOTE
+      ============================== */}
+
       <section
         className="quoteSection"
         id="quote"
       >
+
         <p className="eyebrow lightEyebrow">
           Ready when you are
         </p>
+
 
         <h2>
           Shirt framing from £85
         </h2>
 
+
         <p>
           Bespoke designs quoted individually.
         </p>
 
+
         <div className="buttonRow quoteButtons">
+
           <a
             className="button whatsappButton"
             href={quoteHref}
             target="_blank"
             rel="noreferrer"
           >
-            <span aria-hidden="true">
-              ◉
-            </span>
             Chat on WhatsApp
           </a>
+
 
           <a
             className="button quoteOutline"
@@ -542,12 +647,21 @@ export default function HomePage() {
           >
             Request a Quote
           </a>
+
         </div>
+
       </section>
 
-      {/* FOOTER */}
+
+
+      {/* =============================
+          FOOTER
+      ============================== */}
+
       <footer className="footer">
+
         <div>
+
           <a
             className="brand footerBrand"
             href="#top"
@@ -558,9 +672,12 @@ export default function HomePage() {
           <p>
             Bespoke framing. Bigger stories.
           </p>
+
         </div>
 
+
         <div className="footerLinks">
+
           <a
             href="https://www.instagram.com/fram3_it"
             target="_blank"
@@ -568,6 +685,7 @@ export default function HomePage() {
           >
             Instagram
           </a>
+
 
           <a
             href="https://www.facebook.com/share/1EDtE1bXL7/"
@@ -577,6 +695,7 @@ export default function HomePage() {
             Facebook
           </a>
 
+
           <a
             href={quoteHref}
             target="_blank"
@@ -584,12 +703,16 @@ export default function HomePage() {
           >
             WhatsApp
           </a>
+
         </div>
+
 
         <p className="copyright">
           © 2026 Frame It UK
         </p>
+
       </footer>
+
     </main>
   );
 }
