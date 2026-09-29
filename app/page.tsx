@@ -1,153 +1,538 @@
-export const metadata = {
-  title: "Frame It UK | Bespoke Football Shirt Framing Scotland",
-  description:
-    "Premium football shirt framing and sports memorabilia displays in Scotland. Signed shirts, match-worn memorabilia, medals and custom presentation frames.",
-};
-export default function Home() {
+import Image from "next/image";
+
+const whatsappBase = "https://wa.me/447464768508";
+
+const quoteMessage = encodeURIComponent(
+  "Hi Frame It UK, I’d like a quote for a bespoke frame."
+);
+
+const quoteHref = `${whatsappBase}?text=${quoteMessage}`;
+
+const recentWork = [
+  {
+    src: "/work/brazil.webp",
+    title: "Brazil National Team",
+    subtitle: "Signed shirt",
+    position: "50% 46%",
+  },
+  {
+    src: "/work/kerr.webp",
+    title: "Kerr",
+    subtitle: "Presentation frame",
+    position: "50% 50%",
+  },
+  {
+    src: "/work/mcginn.webp",
+    title: "McGinn",
+    subtitle: "Signed shirt with photos",
+    position: "50% 54%",
+  },
+  {
+    src: "/work/celtic.webp",
+    title: "Celtic FC",
+    subtitle: "Multi-signed shirt",
+    position: "50% 50%",
+  },
+  {
+    src: "/work/dinamo.webp",
+    title: "Dinamo Zagreb",
+    subtitle: "Custom mount design",
+    position: "50% 39%",
+  },
+];
+
+const designs = [
+  {
+    src: "/work/brazil.webp",
+    title: "Classic Shirt Frame",
+    copy: "A clean, timeless layout that keeps the shirt at the centre.",
+    position: "50% 45%",
+  },
+  {
+    src: "/work/mcginn.webp",
+    title: "Photo Display",
+    copy: "Add personal photos and a plaque to tell the full story.",
+    position: "50% 55%",
+  },
+  {
+    src: "/work/aasgaard.webp",
+    title: "Custom Artwork Frame",
+    copy: "Bespoke artwork designed around the shirt and the moment.",
+    position: "50% 22%",
+  },
+  {
+    src: "/work/dinamo.webp",
+    title: "Special Presentation Frame",
+    copy: "Custom mounts, club colours and presentation details.",
+    position: "50% 41%",
+  },
+  {
+    title: "Double Shirt Frame",
+    copy: "Two shirts together in one statement display.",
+    double: ["/work/kerr.webp", "/work/celtic.webp"],
+  },
+  {
+    src: "/work/pat-stanton.webp",
+    title: "Fully Bespoke",
+    copy: "Built around your item, your story and your ideas.",
+    position: "50% 52%",
+  },
+];
+
+const moreWork = [
+  {
+    src: "/work/stevenson.webp",
+    title: "Stevenson",
+    position: "50% 50%",
+  },
+  {
+    src: "/work/pat-stanton.webp",
+    title: "Pat Stanton",
+    position: "50% 53%",
+  },
+  {
+    src: "/work/dinamo.webp",
+    title: "Dinamo Zagreb",
+    position: "50% 41%",
+  },
+  {
+    src: "/work/brazil.webp",
+    title: "Brazil",
+    position: "50% 46%",
+  },
+  {
+    src: "/work/kerr-alt.webp",
+    title: "Kerr",
+    position: "50% 50%",
+  },
+  {
+    src: "/work/mcginn-alt.webp",
+    title: "McGinn",
+    position: "50% 47%",
+  },
+];
+
+export default function HomePage() {
   return (
-    <main className="site">
-      <nav className="nav">
-        <div className="logo">FRAME IT UK</div>
-
-        <div className="navLinks">
-          <a href="/services">Services</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/faq">FAQ</a>
-        </div>
-
-        <a href="/contact" className="navBtn">
-          Get a Quote
+    <main>
+      <header className="siteHeader">
+        <a className="brand" href="#top" aria-label="Frame It UK home">
+          FRAME IT UK
         </a>
-      </nav>
 
-      <section className="hero">
-        <div className="heroText">
+        <nav className="nav" aria-label="Main navigation">
+          <a href="#designs">Designs</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#quote">Quote</a>
+        </nav>
+      </header>
+
+      <section className="hero" id="top">
+        <div className="heroCopy">
           <p className="eyebrow">
-            Bespoke Sports Memorabilia Framing
+            Bespoke sports memorabilia framing
           </p>
 
           <h1>
-            Frame the moment.
+            Your shirt.
             <br />
-            Keep the memory.
+            Your memories.
+            <br />
+            Framed.
           </h1>
 
-          <p className="sub">
-            Premium bespoke framing for signed shirts,
-            sporting memorabilia and presentation displays.
+          <p className="heroText">
+            Bespoke football shirt and memorabilia framing,
+            handmade in Scotland.
           </p>
 
-          <div className="heroButtons">
-            <a href="/contact" className="primary">
-              Build Your Quote
+          <div className="buttonRow">
+            <a
+              className="button buttonDark"
+              href="#designs"
+            >
+              View Designs
+              <span aria-hidden="true">→</span>
             </a>
 
-            <a href="/gallery" className="secondary">
-              View Gallery
+            <a
+              className="button buttonLight"
+              href={quoteHref}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get a Quote
             </a>
           </div>
 
-          <div className="trust">
-            <span>Hand Finished</span>
-            <span>Scotland Based</span>
-            <span>UK Delivery</span>
+          <div
+            className="benefits"
+            aria-label="Frame It UK benefits"
+          >
+            <div>
+              <span
+                className="benefitIcon"
+                aria-hidden="true"
+              >
+                ◇
+              </span>
+
+              <span>
+                Premium quality
+                <br />
+                materials
+              </span>
+            </div>
+
+            <div>
+              <span
+                className="benefitIcon"
+                aria-hidden="true"
+              >
+                ✦
+              </span>
+
+              <span>
+                Handmade
+                <br />
+                in Scotland
+              </span>
+            </div>
+
+            <div>
+              <span
+                className="benefitIcon"
+                aria-hidden="true"
+              >
+                ▣
+              </span>
+
+              <span>
+                UK delivery
+                <br />
+                available
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="heroCard imageHeroCard">
-          <img
-            src="/images/hero.PNG"
-            alt="Frame It UK"
+        <div
+          className="heroVisual"
+          aria-label="Custom artwork frame example"
+        >
+          <Image
+            src="/work/aasgaard.webp"
+            alt="Custom framed Aasgaard football shirt with bespoke artwork background"
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 50vw"
             className="heroImage"
           />
         </div>
       </section>
 
-      <section className="section">
-        <p className="eyebrow">Recent Work</p>
+      <section
+        className="section"
+        id="gallery"
+      >
+        <div className="sectionHeading sectionHeadingLine">
+          <div>
+            <p className="eyebrow">
+              Portfolio
+            </p>
 
-        <h2>
-          Built around the story behind the shirt.
-        </h2>
+            <h2>
+              Recent Work
+            </h2>
+          </div>
 
-        <div className="homeGallery">
-          {[
-            "/images/gallery-1.PNG",
-            "/images/gallery-2.PNG",
-            "/images/gallery-3.PNG",
-            "/images/gallery-15 .JPG",
-            "/images/gallery-12.jpg",
-            "/images/gallery-14.jpg",
-          ].map((image) => (
-            <div className="galleryItem" key={image}>
-              <img
-                src={image}
-                alt="Frame It UK framed shirt"
-                className="galleryRealImage"
-              />
-            </div>
+          <a href="#more-work">
+            View more
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div className="recentGrid">
+          {recentWork.map((item) => (
+            <article
+              className="workCard"
+              key={item.title}
+            >
+              <div className="workImageWrap">
+                <Image
+                  src={item.src}
+                  alt={`${item.title} framed by Frame It UK`}
+                  fill
+                  sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 20vw"
+                  className="workImage"
+                  style={{
+                    objectPosition: item.position,
+                  }}
+                />
+              </div>
+
+              <h3>
+                {item.title}
+              </h3>
+
+              <p>
+                {item.subtitle}
+              </p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="section">
-        <p className="eyebrow">Our Services</p>
+      <section
+        className="section designsSection"
+        id="designs"
+      >
+        <div className="centerHeading">
+          <p className="eyebrow">
+            Find your style
+          </p>
 
-        <h2>
-          Bespoke framing for every sporting memory.
-        </h2>
+          <h2>
+            Choose Your Design
+          </h2>
 
-        <div className="grid">
-          <div className="card">
-            <h3>Football Shirt Framing</h3>
-
-            <p>
-              Signed shirts, match-worn kits,
-              presentation pieces and collector displays.
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>Signed Memorabilia</h3>
-
-            <p>
-              Gloves, boots, photos,
-              medals and premium collector pieces.
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>Presentation Displays</h3>
-
-            <p>
-              Club awards, retirement gifts,
-              team presentations and bespoke layouts.
-            </p>
-          </div>
+          <p>
+            A range of framing styles to suit your shirt,
+            your story and your space.
+          </p>
         </div>
 
-        <div className="heroButtons">
-          <a href="/services" className="primary">
-            Explore Services
+        <div className="designGrid">
+          {designs.map((design) => (
+            <article
+              className="designCard"
+              key={design.title}
+            >
+              <div className="designImageWrap">
+                {design.double ? (
+                  <div className="doubleImage">
+                    {design.double.map(
+                      (src, index) => (
+                        <div
+                          className="doublePane"
+                          key={src}
+                        >
+                          <Image
+                            src={src}
+                            alt={
+                              index === 0
+                                ? "First framed shirt"
+                                : "Second framed shirt"
+                            }
+                            fill
+                            sizes="(max-width: 700px) 35vw, 12vw"
+                            className="workImage"
+                          />
+                        </div>
+                      )
+                    )}
+                  </div>
+                ) : (
+                  <Image
+                    src={design.src!}
+                    alt={`${design.title} by Frame It UK`}
+                    fill
+                    sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 17vw"
+                    className="workImage"
+                    style={{
+                      objectPosition: design.position,
+                    }}
+                  />
+                )}
+              </div>
+
+              <div className="designCopy">
+                <h3>
+                  {design.title}
+                </h3>
+
+                <p>
+                  {design.copy}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="madeForYou">
+        <div className="madeCopy">
+          <p className="eyebrow">
+            Made for you
+          </p>
+
+          <h2>
+            Individually designed.
+            <br />
+            Handmade in Scotland.
+          </h2>
+
+          <p>
+            Every frame is designed around your shirt and
+            your story. From signed shirts and match-worn
+            kits to photos, plaques and bespoke artwork,
+            we create a display that feels personal to you.
+          </p>
+
+          <a
+            className="textLink"
+            href="#designs"
+          >
+            Explore the designs
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div className="madeVisual">
+          <Image
+            src="/work/mcginn-alt.webp"
+            alt="Close detail of a McGinn framed football shirt"
+            fill
+            sizes="(max-width: 900px) 100vw, 55vw"
+            className="madeImage"
+          />
+        </div>
+      </section>
+
+      <section
+        className="section"
+        id="more-work"
+      >
+        <div className="sectionHeading sectionHeadingLine">
+          <div>
+            <p className="eyebrow">
+              More examples
+            </p>
+
+            <h2>
+              More of Our Work
+            </h2>
+          </div>
+
+          <a
+            href={quoteHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Start your frame
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div className="moreGrid">
+          {moreWork.map((item) => (
+            <article
+              className="miniCard"
+              key={item.title}
+            >
+              <div className="miniImageWrap">
+                <Image
+                  src={item.src}
+                  alt={`${item.title} framing example`}
+                  fill
+                  sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 17vw"
+                  className="workImage"
+                  style={{
+                    objectPosition: item.position,
+                  }}
+                />
+              </div>
+
+              <h3>
+                {item.title}
+              </h3>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="quoteSection"
+        id="quote"
+      >
+        <p className="eyebrow lightEyebrow">
+          Ready when you are
+        </p>
+
+        <h2>
+          Shirt framing from £85
+        </h2>
+
+        <p>
+          Bespoke designs quoted individually.
+        </p>
+
+        <div className="buttonRow quoteButtons">
+          <a
+            className="button whatsappButton"
+            href={quoteHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span aria-hidden="true">◉</span>
+            Chat on WhatsApp
+          </a>
+
+          <a
+            className="button quoteOutline"
+            href={quoteHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Request a Quote
           </a>
         </div>
       </section>
 
-      <section className="cta">
-        <h2>
-          Ready to frame your sporting memory?
-        </h2>
+      <footer className="footer">
+        <div>
+          <a
+            className="brand footerBrand"
+            href="#top"
+          >
+            FRAME IT UK
+          </a>
 
-        <p>
-          Upload your item and we’ll build a bespoke framing quote.
+          <p>
+            Bespoke framing. Bigger stories.
+          </p>
+        </div>
+
+        <div className="footerLinks">
+          <a
+            href="https://www.instagram.com/fram3_it"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://www.facebook.com/share/1EDtE1bXL7/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Facebook
+          </a>
+
+          <a
+            href={whatsappBase}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp
+          </a>
+        </div>
+
+        <p className="copyright">
+          © 2026 Frame It UK
         </p>
-
-        <a href="/contact" className="primary">
-          Start Your Quote
-        </a>
-      </section>
+      </footer>
     </main>
   );
 }
