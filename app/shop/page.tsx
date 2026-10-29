@@ -13,17 +13,13 @@ type Product = {
 
 const products: Product[] = [
   {
-    name: "Celtic FC 2025/26 Benjamin Nygren Home Shirt – Player Edition Framed Display",
-    price: "£199",
-    description: "Celtic FC 2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition display. 
-      Featuring a sleek black frame, bold NYGREN lettering, precision-cut mount with white bevel detailing and three player photographs.
-      Available with glass or Perspex front. Glass requires collection or specialist delivery, 
-      while Perspex is suitable for standard courier delivery. 
-      A stunning centrepiece for any Celtic supporter. Frame size 594 x 841 mm",
-    image: "/images/work/brazil.webp",A clean, professionally finished football shirt frame, handmade in Scotland.
-    paymentLink: "paymentLink: "https://buy.stripe.com/bJe8wI6Hz4hKcu5fRMeME00",
-    badge: "Popular",
-  },
+  name: "Benjamin Nygren Home Shirt – Player Edition Framed Display",
+  price: "YOUR CURRENT PRICE",
+  description: `2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass requires collection or specialist delivery and is not suitable for standard courier delivery.`,
+  image: "/images/work/YOUR-IMAGE-NAME",
+  paymentLink: "https://buy.stripe.com/bJe8wI6Hz4hKcu5fRMeME00",
+  badge: "Player Edition",
+},
   {
     name: "Presentation Shirt Frame",
     price: "£POA",
