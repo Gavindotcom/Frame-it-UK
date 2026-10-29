@@ -70,7 +70,7 @@ const products: Product[] = [
     price: "£87.99",
     description:
       "This is our Classic shirt frame display online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
-    image: "public/images/brazil.webp",
+    image: "/images/work/brazil.webp",
     paymentLink: "https://buy.stripe.com/dRm4gs8PHg0scu5bBweME07",
     badge: "PRE-ARRANGED SERVICE",
   },
