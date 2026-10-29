@@ -123,8 +123,8 @@ export default function ShopPage() {
         </h1>
 
         <p className={styles.intro}>
-          Choose from a small selection of our most popular framing
-          options and pay securely online.
+          You can choose from a small selection of our most popular framing
+          options and pay securely online AND from time to time we also have some incredible authentic framed memoribila for sale. 
         </p>
       </section>
 
