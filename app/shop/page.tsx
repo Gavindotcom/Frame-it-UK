@@ -18,7 +18,7 @@ const products: Product[] = [
   description: `2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass requires collection or specialist delivery and is not suitable for standard courier delivery.`,
   image: "/images/work/YOUR-IMAGE-NAME",
   paymentLink: "https://buy.stripe.com/4gMbIUaXP3dG3Xz0WSeME02",
-  badge: "Player Edition",
+  badge: "COA Provided",
 },
   {
     name: "QPR 2026/27 Glen Kamara Match-Worn Home Shirt – MWS Authenticated Player Edition",
@@ -36,7 +36,7 @@ const products: Product[] = [
       "A Ryan Christie signed Scotland 2020/21 home shirt, professionally presented in our premium black Player Edition frame. Featuring bold CHRISTIE lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A stunning collector's piece celebrating Scottish international football. Frame Size 594 x 841 mm",
     image: "/images/work/YOUR-IMAGE-NAME",
     paymentLink: "https://buy.stripe.com/00w9AMd5XaG83Xz7lgeME01",
-    badge: "Player Edition",
+    badge: "COA provided",
   },
    {
     name: "Beşiktaş 2025/26 Rıdvan Yılmaz Match-Worn Home Shirt – MWS Authenticated Player Edition",
