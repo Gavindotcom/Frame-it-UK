@@ -27,6 +27,7 @@ const products: Product[] = [
       "An authentic match-worn QPR 2026/27 home shirt worn by Glen Kamara, in the 4-1 home win against Derby County 14/10/26. Professionally presented in our premium black Player Edition frame, featuring bold KAMARA lettering, precision-cut mount with white bevel detailing and three player photographs. Available with glass front for collection only, or Perspex for standard courier delivery. A unique collector's piece for any QPR supporter. Frame size 594 x 841 mm",
     image: "/images/work/YOUR-IMAGE-NAME",
     paymentLink: "https://buy.stripe.com/fZu28kc1TdSkalXdJEeME03",
+    badge: "Player Edition",
   },
   {
     name: "Scotland 2020/21 Ryan Christie Signed Home Shirt – Player Edition Framed Display",
@@ -35,6 +36,7 @@ const products: Product[] = [
       "A Ryan Christie signed Scotland 2020/21 home shirt, professionally presented in our premium black Player Edition frame. Featuring bold CHRISTIE lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A stunning collector's piece celebrating Scottish international football. Frame Size 594 x 841 mm",
     image: "/images/work/YOUR-IMAGE-NAME",
     paymentLink: "https://buy.stripe.com/00w9AMd5XaG83Xz7lgeME01",
+    badge: "Player Edition",
   },
 ];
 
