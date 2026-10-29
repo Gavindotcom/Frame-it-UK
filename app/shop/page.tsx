@@ -27,7 +27,7 @@ const products: Product[] = [
       "An authentic match-worn QPR 2026/27 home shirt worn by Glen Kamara, in the 4-1 home win against Derby County 14/10/26. Professionally presented in our premium black Player Edition frame, featuring bold KAMARA lettering, precision-cut mount with white bevel detailing and three player photographs. Available with glass front for collection only, or Perspex for standard courier delivery. A unique collector's piece for any QPR supporter. Frame size 594 x 841 mm",
     image: "/images/work/YOUR-IMAGE-NAME",
     paymentLink: "https://buy.stripe.com/fZu28kc1TdSkalXdJEeME03",
-    badge: "Player Edition",
+    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
   },
   {
     name: "Scotland 2020/21 Ryan Christie Signed Home Shirt – Player Edition Framed Display",
@@ -45,7 +45,7 @@ const products: Product[] = [
       "An authentic match-worn Beşiktaş 2025/26 home shirt worn by Rıdvan Yılmaz, fully authenticated by MatchWornShirt (MWS). Professionally presented in our premium black Player Edition frame, featuring bold RIDVAN lettering, precision-cut mount with white bevel detailing and three player photographs.vAvailable with glass front for collection or specialist delivery, or Perspex for standard courier delivery.vA unique collector's piece for any Beşiktaş supporter. Frame size 594 x 841 mm",
     image: "/images/work/YOUR-IMAGE-2.jpg",
     paymentLink: "https://buy.stripe.com/eVqaEQ3vneWo65H0WSeME04",
-    badge: "Player Edition",
+    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
   },
    {
     name: "Wolves 2025/26 Squad-Signed Home Shirt – Player Edition Framed Display",
@@ -54,32 +54,43 @@ const products: Product[] = [
       "A Wolverhampton Wanderers 2025/26 home shirt, squad signed and sourced from MatchWornShirt (MWS). Professionally presented in our premium black A1 Player Edition frame, featuring bold WOLVES lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A fantastic collector's piece for any Wolves supporter. Frame size 594 x 841 mm",
     image: "/images/work/YOUR-IMAGE-2.jpg",
     paymentLink: "https://buy.stripe.com/cNi9AMc1T5lO65H8pkeME05",
-    badge: "Player Edition",
+    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
   },
    {
-    name: "Player Edition Frame Display",
-    price: "£0",
+    name: "Hibernian 2025/26 Jack Iredale Signed Match-Worn Shirt – Player Edition",
+    price: "£124.99",
     description:
-      "Add your product description here.",
+      "An authentic, signed match-worn Jack Iredale Hibernian 2025/26 shirt, worn during Hibs' memorable 2–1 victory over Rangers at Ibrox on 13 May 2026. Fully authenticated by MatchWornShirt (MWS) using Fabricks technology.Presented in our premium black Player Edition frame, featuring IREDALE lettering, white bevel detailing and three player photographs. Glass front available for collection or specialist delivery; Perspex for standard courier delivery. Frame Size 594 x 841mm.",
     image: "/images/work/YOUR-IMAGE-2.jpg",
-    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
-    badge: "Player Edition",
+    paymentLink: "https://buy.stripe.com/bJe9AM0jb5lOcu58pkeME06",
+    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
   },
    {
-    name: "Product Two",
-    price: "£0",
+    name: "Classic Shirt Framed Display",
+    price: "£87.99",
     description:
-      "Add your product description here.",
+      "This is our Classic shirt frame display online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
     image: "/images/work/YOUR-IMAGE-2.jpg",
-    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
+    paymentLink: "https://buy.stripe.com/dRm4gs8PHg0scu5bBweME07",
+    badge: "PRE-ARRANGED SERVICE",
   },
    {
-    name: "Product Two",
-    price: "£0",
+    name: "Framed Shirt Photo Display",
+    price: "£97.99",
     description:
-      "Add your product description here.",
+      "This is our Framed Shirt Photo Display online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
     image: "/images/work/YOUR-IMAGE-2.jpg",
-    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
+    paymentLink: "https://buy.stripe.com/6oUaEQ9TL7tW79L7lgeME08",
+    badge: "PRE-ARRANGED SERVICE",
+  },
+  {
+    name: "Custom Artwork Frame",
+    price: "£139.99",
+    description:
+      "This is our Custom Artwork Frame online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
+    image: "/images/work/YOUR-IMAGE-2.jpg",
+    paymentLink: "https://buy.stripe.com/dRm5kwgi9eWo0Ln350eME09",
+    badge: "PRE-ARRANGED SERVICE",
   },
 ];
 
