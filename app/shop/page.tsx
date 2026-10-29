@@ -21,12 +21,12 @@ const products: Product[] = [
   badge: "Player Edition",
 },
   {
-    name: "Presentation Shirt Frame",
-    price: "£POA",
+    name: "QPR 2026/27 Glen Kamara Match-Worn Home Shirt – MWS Authenticated Player Edition",
+    price: "£249.99",
     description:
-      "A premium presentation layout with photographs, plaque and personalised design.",
-    image: "/images/work/mcginn.webp",
-    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
+      "An authentic match-worn QPR 2026/27 home shirt worn by Glen Kamara, in the 4-1 home win against Derby County 14/10/26. Professionally presented in our premium black Player Edition frame, featuring bold KAMARA lettering, precision-cut mount with white bevel detailing and three player photographs. Available with glass front for collection only, or Perspex for standard courier delivery. A unique collector's piece for any QPR supporter. Frame size 594 x 841 mm",
+    image: "/images/work/YOUR-IMAGE-NAME",
+    paymentLink: "https://buy.stripe.com/fZu28kc1TdSkalXdJEeME03",
   },
   {
     name: "Scotland 2020/21 Ryan Christie Signed Home Shirt – Player Edition Framed Display",
