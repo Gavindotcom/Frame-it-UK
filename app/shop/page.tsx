@@ -79,7 +79,7 @@ const products: Product[] = [
     price: "£97.99",
     description:
       "This is our Framed Shirt Photo Display online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
-    image: "public/images/mcginn-alt.webp",
+    image: "/images/mcginn-alt.webp",
     paymentLink: "https://buy.stripe.com/6oUaEQ9TL7tW79L7lgeME08",
     badge: "PRE-ARRANGED SERVICE",
   },
@@ -88,7 +88,7 @@ const products: Product[] = [
     price: "£139.99",
     description:
       "This is our Custom Artwork Frame online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
-    image: "public/images/aasgaard.webp",
+    image: "/images/aasgaard.webp",
     paymentLink: "https://buy.stripe.com/dRm5kwgi9eWo0Ln350eME09",
     badge: "PRE-ARRANGED SERVICE",
   },
