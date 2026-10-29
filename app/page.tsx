@@ -162,22 +162,25 @@ export default function HomePage() {
         </a>
 
         <nav
-          className="nav"
-          aria-label="Main navigation"
-        >
-          <a href="#designs">
-            Designs
-          </a>
+  className="nav"
+  aria-label="Main navigation"
+>
+  <a href="#designs">
+    Designs
+  </a>
 
-          <a href="#gallery">
-            Gallery
-          </a>
+  <a href="#gallery">
+    Gallery
+  </a>
 
-          <a href="#quote">
-            Quote
-          </a>
-        </nav>
+  <a href="/shop">
+    Shop
+  </a>
 
+  <a href="#quote">
+    Quote
+  </a>
+</nav>
       </header>
 
 
