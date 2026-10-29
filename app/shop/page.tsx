@@ -14,7 +14,7 @@ type Product = {
 const products: Product[] = [
   {
   name: "Benjamin Nygren Home Shirt – Player Edition Framed Display",
-  price: "£199.99",
+  price: "£199",
   description: `2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass requires collection or specialist delivery and is not suitable for standard courier delivery.`,
   image: "/images/work/YOUR-IMAGE-NAME",
   paymentLink: "https://buy.stripe.com/4gMbIUaXP3dG3Xz0WSeME02",
@@ -37,6 +37,49 @@ const products: Product[] = [
     image: "/images/work/YOUR-IMAGE-NAME",
     paymentLink: "https://buy.stripe.com/00w9AMd5XaG83Xz7lgeME01",
     badge: "Player Edition",
+  },
+   {
+    name: "Beşiktaş 2025/26 Rıdvan Yılmaz Match-Worn Home Shirt – MWS Authenticated Player Edition",
+    price: "£249.99",
+    description:
+      "An authentic match-worn Beşiktaş 2025/26 home shirt worn by Rıdvan Yılmaz, fully authenticated by MatchWornShirt (MWS). Professionally presented in our premium black Player Edition frame, featuring bold RIDVAN lettering, precision-cut mount with white bevel detailing and three player photographs.vAvailable with glass front for collection or specialist delivery, or Perspex for standard courier delivery.vA unique collector's piece for any Beşiktaş supporter. Frame size 594 x 841 mm",
+    image: "/images/work/YOUR-IMAGE-2.jpg",
+    paymentLink: "https://buy.stripe.com/eVqaEQ3vneWo65H0WSeME04",
+    badge: "Player Edition",
+  },
+   {
+    name: "Wolves 2025/26 Squad-Signed Home Shirt – Player Edition Framed Display",
+    price: "£199",
+    description:
+      "A Wolverhampton Wanderers 2025/26 home shirt, squad signed and sourced from MatchWornShirt (MWS). Professionally presented in our premium black A1 Player Edition frame, featuring bold WOLVES lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A fantastic collector's piece for any Wolves supporter. Frame size 594 x 841 mm",
+    image: "/images/work/YOUR-IMAGE-2.jpg",
+    paymentLink: "https://buy.stripe.com/cNi9AMc1T5lO65H8pkeME05",
+    badge: "Player Edition",
+  },
+   {
+    name: "Player Edition Frame Display",
+    price: "£0",
+    description:
+      "Add your product description here.",
+    image: "/images/work/YOUR-IMAGE-2.jpg",
+    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
+    badge: "Player Edition",
+  },
+   {
+    name: "Product Two",
+    price: "£0",
+    description:
+      "Add your product description here.",
+    image: "/images/work/YOUR-IMAGE-2.jpg",
+    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
+  },
+   {
+    name: "Product Two",
+    price: "£0",
+    description:
+      "Add your product description here.",
+    image: "/images/work/YOUR-IMAGE-2.jpg",
+    paymentLink: "PASTE_STRIPE_LINK_2_HERE",
   },
 ];
 
