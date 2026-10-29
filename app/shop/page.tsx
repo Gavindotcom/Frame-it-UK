@@ -29,12 +29,12 @@ const products: Product[] = [
     paymentLink: "PASTE_STRIPE_LINK_2_HERE",
   },
   {
-    name: "Custom Artwork Frame",
-    price: "£POA",
+    name: "Scotland 2020/21 Ryan Christie Signed Home Shirt – Player Edition Framed Display",
+    price: "£149.99",
     description:
-      "Your shirt combined with bespoke artwork to create a completely individual display.",
-    image: "/images/work/aasgaard.webp",
-    paymentLink: "PASTE_STRIPE_LINK_3_HERE",
+      "A Ryan Christie signed Scotland 2020/21 home shirt, professionally presented in our premium black Player Edition frame. Featuring bold CHRISTIE lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A stunning collector's piece celebrating Scottish international football. Frame Size 594 x 841 mm",
+    image: "/images/work/YOUR-IMAGE-NAME",
+    paymentLink: "https://buy.stripe.com/00w9AMd5XaG83Xz7lgeME01",
   },
 ];
 
