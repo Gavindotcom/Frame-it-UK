@@ -88,7 +88,7 @@ const products: Product[] = [
     price: "£139.99",
     description:
       "This is our Custom Artwork Frame online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
-    image: "/images/work/YOUR-IMAGE-2.jpg",
+    image: "public/images/aasgaard.webp",
     paymentLink: "https://buy.stripe.com/dRm5kwgi9eWo0Ln350eME09",
     badge: "PRE-ARRANGED SERVICE",
   },
