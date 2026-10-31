@@ -85,7 +85,7 @@ const products: Product[] = [
   },
   {
     name: "Custom Artwork Frame",
-    price: "£139.99",
+    price: "£169.99",
     description:
       "This is our Custom Artwork Frame online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
     image: "/images/aasgaard.webp",
