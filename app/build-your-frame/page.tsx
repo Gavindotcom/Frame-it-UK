@@ -457,27 +457,22 @@ function ShirtPreview() {
     <svg
       viewBox="0 0 300 350"
       className={styles.shirtSvg}
+      aria-label="Frame It UK branded shirt preview"
     >
       <defs>
         <linearGradient
-          id="shirtBlue"
+          id="shirtRed"
           x1="0"
           y1="0"
           x2="1"
           y2="1"
         >
-          <stop
-            offset="0%"
-            stopColor="#315f91"
-          />
-
-          <stop
-            offset="100%"
-            stopColor="#162f52"
-          />
+          <stop offset="0%" stopColor="#a12635" />
+          <stop offset="100%" stopColor="#6f1523" />
         </linearGradient>
       </defs>
 
+      {/* Shirt shape */}
       <path
         d="
           M91 49
@@ -497,9 +492,10 @@ function ShirtPreview() {
           C140 69 127 59 119 37
           Z
         "
-        fill="url(#shirtBlue)"
+        fill="url(#shirtRed)"
       />
 
+      {/* Collar */}
       <path
         d="
           M119 37
@@ -510,20 +506,115 @@ function ShirtPreview() {
           C143 47 137 42 132 31
           Z
         "
-        fill="#f5f5f5"
+        fill="#7d1827"
       />
 
+      {/* Shoulder stripe details */}
+      {Array.from({ length: 8 }).map((_, i) => (
+        <line
+          key={`left-${i}`}
+          x1={82 + i * 9}
+          y1={78}
+          x2={112 + i * 9}
+          y2={58}
+          stroke="rgba(255,255,255,0.85)"
+          strokeWidth="3"
+        />
+      ))}
+
+      {Array.from({ length: 8 }).map((_, i) => (
+        <line
+          key={`right-${i}`}
+          x1={168 + i * 9}
+          y1={58}
+          x2={198 + i * 9}
+          y2={78}
+          stroke="rgba(255,255,255,0.85)"
+          strokeWidth="3"
+        />
+      ))}
+
+      {/* Mid chest chevrons */}
+      <path
+        d="M78 118 L110 132 L126 118 L94 104 Z"
+        fill="rgba(255,255,255,0.95)"
+      />
+      <path
+        d="M105 118 L137 132 L153 118 L121 104 Z"
+        fill="rgba(255,255,255,0.95)"
+      />
+      <path
+        d="M132 118 L164 132 L180 118 L148 104 Z"
+        fill="rgba(255,255,255,0.95)"
+      />
+      <path
+        d="M159 118 L191 132 L207 118 L175 104 Z"
+        fill="rgba(255,255,255,0.95)"
+      />
+
+      {/* Small icon mark */}
+      <rect
+        x="95"
+        y="150"
+        width="46"
+        height="42"
+        fill="none"
+        stroke="white"
+        strokeWidth="4"
+      />
+      <path
+        d="
+          M108 182
+          L108 168
+          L118 158
+          L132 158
+          L142 168
+          L142 182
+        "
+        fill="none"
+        stroke="white"
+        strokeWidth="4"
+        strokeLinejoin="round"
+      />
+
+      {/* Main branding */}
       <text
-        x="150"
-        y="180"
-        textAnchor="middle"
+        x="155"
+        y="168"
         fill="white"
-        fontSize="58"
+        fontSize="14"
         fontWeight="700"
         fontFamily="Arial"
+        letterSpacing="1"
       >
-        10
+        FRAME IT
+      </text>
+
+      <text
+        x="155"
+        y="185"
+        fill="white"
+        fontSize="14"
+        fontWeight="700"
+        fontFamily="Arial"
+        letterSpacing="1"
+      >
+        UK
+      </text>
+
+      <text
+        x="155"
+        y="205"
+        fill="white"
+        fontSize="10"
+        fontWeight="700"
+        fontFamily="Arial"
+        letterSpacing="1.3"
+      >
+        MEMORABILIA FRAMING
       </text>
     </svg>
+  );
+}
   );
 }
