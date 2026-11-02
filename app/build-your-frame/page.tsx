@@ -328,11 +328,11 @@ Front: ${summary.glazing}`
                           <ShirtPreview />
                         </div>
 
-                        {plaque === "Yes" && (
-                          <Plaque
-                            text={plaqueText}
-                          />
-                        )}
+                      {plaque === "Yes" && (
+  <div className={styles.classicPlaqueWrap}>
+    <Plaque text={plaqueText} />
+  </div>
+)}
                       </div>
                     )}
 
