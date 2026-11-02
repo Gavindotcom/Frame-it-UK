@@ -353,35 +353,170 @@ Front: ${summary.glazing}`
 
             {/* SIMPLE LIVE PREVIEW */}
 
-            <div
-              className={styles.previewFrame}
-              style={{
-                backgroundColor:
-                  frameColours[
-                    frameColour as keyof typeof frameColours
-                  ],
-              }}
-            >
-              <div
-                className={styles.previewMount}
-                style={{
-                  backgroundColor:
-                    mountColours[
-                      mountColour as keyof typeof mountColours
-                    ],
-                }}
-              >
-                <div className={styles.previewShirt}>
-                  SHIRT
-                </div>
+            <div className={styles.previewStage}>
 
-                {plaque === "Yes" && (
-                  <div className={styles.previewPlaque}>
-                    {plaqueText || "YOUR PLAQUE"}
-                  </div>
-                )}
-              </div>
-            </div>
+  <div
+    className={styles.previewFrame}
+    style={{
+      backgroundColor:
+        frameColours[
+          frameColour as keyof typeof frameColours
+        ],
+    }}
+  >
+
+    <div className={styles.frameInnerEdge}>
+
+      <div
+        className={`${styles.previewMount} ${
+          mount === "Custom Artwork"
+            ? styles.artworkMount
+            : ""
+        }`}
+        style={{
+          backgroundColor:
+            mountColours[
+              mountColour as keyof typeof mountColours
+            ],
+        }}
+      >
+
+        {mount === "Double Mount" && (
+          <div className={styles.doubleMountBevel} />
+        )}
+
+        <div className={styles.shirtArea}>
+
+          <svg
+            viewBox="0 0 300 360"
+            className={styles.shirtSvg}
+            aria-label="Football shirt preview"
+          >
+
+            <defs>
+              <linearGradient
+                id="shirtGradient"
+                x1="0"
+                y1="0"
+                x2="1"
+                y2="1"
+              >
+                <stop
+                  offset="0%"
+                  stopColor="#315b8a"
+                />
+
+                <stop
+                  offset="100%"
+                  stopColor="#172f50"
+                />
+              </linearGradient>
+            </defs>
+
+
+            {/* sleeves */}
+
+            <path
+              d="
+                M92 50
+                L62 66
+                L27 118
+                L68 143
+                L91 117
+                L91 300
+                L209 300
+                L209 117
+                L232 143
+                L273 118
+                L238 66
+                L208 50
+                L181 38
+                C173 60 160 70 150 70
+                C140 70 127 60 119 38
+                Z
+              "
+              fill="url(#shirtGradient)"
+            />
+
+
+            {/* collar */}
+
+            <path
+              d="
+                M119 38
+                C128 55 138 63 150 63
+                C162 63 172 55 181 38
+                L168 32
+                C163 43 157 48 150 48
+                C143 48 137 43 132 32
+                Z
+              "
+              fill="#f2f2f2"
+            />
+
+
+            {/* shirt detail */}
+
+            <path
+              d="M150 70 L150 298"
+              stroke="rgba(255,255,255,0.16)"
+              strokeWidth="2"
+            />
+
+
+            <circle
+              cx="115"
+              cy="91"
+              r="11"
+              fill="#f5f5f5"
+            />
+
+
+            <text
+              x="150"
+              y="180"
+              textAnchor="middle"
+              fill="white"
+              fontSize="62"
+              fontWeight="700"
+              fontFamily="Arial"
+            >
+              10
+            </text>
+
+          </svg>
+
+        </div>
+
+
+        {plaque === "Yes" && (
+
+          <div className={styles.realPlaque}>
+
+            <span>
+              {plaqueText ||
+                "YOUR PERSONALISED PLAQUE"}
+            </span>
+
+          </div>
+
+        )}
+
+
+        {/* glass reflection */}
+
+        <div className={styles.glassReflection} />
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div className={styles.frameShadow} />
+
+</div>
 
 
             <dl className={styles.summaryList}>
