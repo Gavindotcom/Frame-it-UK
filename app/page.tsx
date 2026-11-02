@@ -144,9 +144,86 @@ const moreWork: WorkItem[] = [
 
 
 export default function HomePage() {
+  const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://frame-it-uk.com/#business",
+
+  name: "Frame It UK",
+
+  url: "https://frame-it-uk.com",
+
+  description:
+    "Bespoke football shirt and sports memorabilia framing handmade in Scotland.",
+
+  image:
+    "https://frame-it-uk.com/images/work/assgaard-hero.jpeg.jpg",
+
+  priceRange: "£85+",
+
+  areaServed: [
+    {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Scotland",
+    },
+  ],
+
+  sameAs: [
+    "https://www.instagram.com/fram3_it",
+  ],
+
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+
+    name: "Football Shirt Framing Services",
+
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Classic Football Shirt Framing",
+        },
+      },
+
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Football Shirt Photo Display",
+        },
+      },
+
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Artwork Football Shirt Frame",
+        },
+      },
+
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Double Football Shirt Frame",
+        },
+      },
+    ],
+  },
+};
   return (
     <main>
-
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(businessSchema),
+  }}
+/>
       {/* =============================
           HEADER
       ============================== */}
