@@ -455,9 +455,9 @@
   display: grid;
 
   grid-template-rows:
-    10%
+    9%
     1fr
-    11%;
+    8%;
 
   gap: 3%;
 }
@@ -812,4 +812,17 @@
     width: 100%;
     margin-left: 0;
   }
+}
+.classicPlaqueWrap {
+  width: 46%;
+  max-width: 155px;
+
+  margin: 0 auto;
+
+  align-self: center;
+  justify-self: center;
+}
+
+.classicPlaqueWrap .realPlaque {
+  width: 100%;
 }
