@@ -126,17 +126,17 @@ const moreWork: WorkItem[] = [
     position: "50% 41%",
   },
   {
-    src: "/images/work/brazil.webp",
+    src: "/images/work/Hibs 7.png",
     title: "Brazil",
     position: "50% 46%",
   },
   {
-    src: "/images/work/kerr-alt.webp",
+    src: "/images/work/Hearts Youth.png",
     title: "Kerr",
     position: "50% 50%",
   },
   {
-    src: "/images/work/mcginn-alt.webp",
+    src: "/images/work/Darts.png",
     title: "McGinn",
     position: "50% 47%",
   },
