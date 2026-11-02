@@ -450,3 +450,4 @@ Front: ${summary.glazing}`
     </main>
   );
 }
+
