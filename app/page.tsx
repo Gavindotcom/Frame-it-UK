@@ -324,26 +324,41 @@ export default function HomePage() {
           FRAME IT UK
         </a>
 
-        <nav
-          className="nav"
-          aria-label="Main navigation"
-        >
-          <a href="#designs">
-            Designs
-          </a>
+      <div className="footerLinks">
 
-          <a href="#gallery">
-            Gallery
-          </a>
+  <Link href="/about">
+    About
+  </Link>
 
-          <Link href="/shop">
-            Shop
-          </Link>
+  <Link href="/shop">
+    Shop
+  </Link>
 
-          <a href="#quote">
-            Quote
-          </a>
-        </nav>
+  <a
+    href="https://www.instagram.com/fram3_it"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="https://www.facebook.com/share/1EDtE1bXL7/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Facebook
+  </a>
+
+  <a
+    href={quoteHref}
+    target="_blank"
+    rel="noreferrer"
+  >
+    WhatsApp
+  </a>
+
+</div>
 
       </header>
 
@@ -1027,38 +1042,7 @@ export default function HomePage() {
         </div>
 
 
-        <div className="footerLinks">
-
-          <Link href="/shop">
-            Shop
-          </Link>
-
-          <a
-            href="https://www.instagram.com/fram3_it"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="https://www.facebook.com/share/1EDtE1bXL7/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Facebook
-          </a>
-
-          <a
-            href={quoteHref}
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp
-          </a>
-
-        </div>
-
+       Homepage → About → Shop → Homepage
 
         <p className="copyright">
           © 2026 Frame It UK
