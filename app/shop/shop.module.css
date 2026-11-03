@@ -4,410 +4,676 @@
   color: #11110f;
 }
 
-.header {
-  min-height: 72px;
-  padding: 0 5vw;
 
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid rgba(17, 17, 15, 0.1);
+  padding: 22px 5vw;
+
+  background: rgba(247, 245, 241, 0.96);
+  border-bottom: 1px solid #dedbd4;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  backdrop-filter: blur(12px);
 }
 
 .brand {
-  color: inherit;
+  color: #11110f;
   text-decoration: none;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.27em;
+  letter-spacing: 0.16em;
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav a {
-  color: inherit;
+  color: #33312d;
   text-decoration: none;
-  font-size: 0.8rem;
+
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  transition: opacity 0.2s ease;
 }
 
+.nav a:hover {
+  opacity: 0.55;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
 .hero {
-  padding:
-    clamp(5rem, 10vw, 9rem)
-    5vw
-    clamp(4rem, 7vw, 7rem);
+  padding: 90px 5vw 70px;
 
   max-width: 1500px;
   margin: 0 auto;
 }
 
 .eyebrow {
-  margin: 0 0 1rem;
+  margin: 0 0 18px;
 
-  color: #66645f;
-
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
 
-  letter-spacing: 0.18em;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
+
+  color: #77736c;
 }
 
 .hero h1 {
   margin: 0;
 
+  max-width: 900px;
+
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.7rem, 8vw, 8rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 400;
 
-  line-height: 0.9;
-  letter-spacing: -0.055em;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
 .intro {
-  max-width: 570px;
+  margin: 30px 0 0;
 
-  margin: 2rem 0 0;
+  max-width: 720px;
 
-  color: #66645f;
+  color: #65615b;
 
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.2rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
+
+/* ========================================
+   PRODUCTS GRID
+======================================== */
+
 .products {
+  width: 90%;
   max-width: 1500px;
 
   margin: 0 auto;
 
-  padding:
-    0
-    5vw
-    clamp(6rem, 9vw, 10rem);
-
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: 30px;
+  align-items: stretch;
 }
 
+
+/* ========================================
+   PRODUCT CARD
+======================================== */
+
 .card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
   background: #ffffff;
+
+  border: 1px solid #e2dfd8;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: #d3cfc7;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
 
 .imageWrap {
   position: relative;
 
-  aspect-ratio: 0.82;
+  width: 100%;
+  aspect-ratio: 4 / 5;
 
   overflow: hidden;
 
-  background: #e7e3dc;
+  background: #efede8;
 }
 
 .image {
   object-fit: cover;
+  object-position: center;
 
-  transition: transform 500ms ease;
+  transition: transform 0.4s ease;
 }
 
 .card:hover .image {
-  transform: scale(1.025);
+  transform: scale(1.015);
 }
+
+
+/* ========================================
+   PRODUCT BADGE
+======================================== */
 
 .badge {
   position: absolute;
 
-  top: 1rem;
-  left: 1rem;
+  top: 14px;
+  left: 14px;
 
-  padding: 0.55rem 0.75rem;
+  z-index: 2;
 
+  display: inline-flex;
+  align-items: center;
+
+  max-width: calc(100% - 28px);
+
+  padding: 8px 10px;
+
+  background: rgba(17, 17, 15, 0.92);
   color: #ffffff;
-  background: #11110f;
 
-  font-size: 0.67rem;
+  font-size: 0.6rem;
   font-weight: 700;
 
-  letter-spacing: 0.09em;
+  line-height: 1.2;
+
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
 .cardContent {
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 24px;
 }
 
 .productHeading {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
 
-  gap: 1rem;
+  min-height: 125px;
+
+  margin-bottom: 14px;
 }
 
 .productHeading h2 {
-  margin: 0;
+  margin: 0 0 14px;
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
+
+  font-size: 1.25rem;
   font-weight: 400;
+
+  line-height: 1.25;
+
+  color: #11110f;
 }
 
-.productHeading span {
-  white-space: nowrap;
+.productHeading > span {
+  margin-top: auto;
 
+  font-size: 1rem;
   font-weight: 700;
+
+  color: #11110f;
 }
 
-.cardContent p {
-  min-height: 68px;
+.cardContent > p {
+  margin: 0 0 14px;
 
-  margin: 1rem 0 1.5rem;
+  color: #68645e;
 
-  color: #66645f;
+  font-size: 0.78rem;
 
-  font-size: 0.85rem;
-  line-height: 1.55;
+  line-height: 1.65;
 }
+
+
+/* ========================================
+   BUTTONS
+======================================== */
 
 .buyButton,
 .disabledButton {
-  min-height: 50px;
+  width: 100%;
+  min-height: 52px;
+
+  box-sizing: border-box;
+
+  margin-top: auto;
+
+  padding: 0 18px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 1rem;
+  text-decoration: none;
 
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
 
-  text-decoration: none;
+  letter-spacing: 0.04em;
 }
 
 .buyButton {
-  color: white;
   background: #11110f;
+  color: #ffffff;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.buyButton:hover {
+  background: #34312d;
+}
+
+.buyButton span {
+  font-size: 1rem;
+
+  transition: transform 0.2s ease;
+}
+
+.buyButton:hover span {
+  transform: translateX(4px);
 }
 
 .disabledButton {
-  color: #77736c;
-  background: #ebe8e2;
+  justify-content: center;
+
+  background: #e8e5df;
+  color: #8a857d;
+
+  cursor: not-allowed;
 }
+
+
+/* ========================================
+   HOW IT WORKS
+======================================== */
 
 .howItWorks {
-  padding:
-    clamp(5rem, 8vw, 8rem)
-    5vw;
+  width: 90%;
+  max-width: 1500px;
 
-  background: #efede8;
+  margin: 100px auto 0;
+
+  padding: 70px 0;
+
+  border-top: 1px solid #d9d6cf;
 }
 
-.howItWorks > h2 {
-  margin: 0 0 3rem;
+.howItWorks h2 {
+  margin: 0 0 45px;
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.7rem, 5vw, 5rem);
+
+  font-size: clamp(2rem, 4vw, 3.8rem);
   font-weight: 400;
 
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
 }
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
 }
 
 .steps > div {
-  padding-top: 1.3rem;
+  padding-top: 20px;
 
-  border-top: 1px solid #cac6bf;
+  border-top: 2px solid #11110f;
 }
 
 .steps span {
-  color: #77736c;
+  display: block;
 
-  font-size: 0.72rem;
+  margin-bottom: 28px;
+
+  color: #8b867e;
+
+  font-size: 0.67rem;
+  font-weight: 700;
 }
 
 .steps h3 {
-  margin: 1rem 0 0.65rem;
+  margin: 0 0 12px;
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
+
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
 .steps p {
-  max-width: 350px;
-
   margin: 0;
 
-  color: #66645f;
+  max-width: 360px;
+
+  color: #68645e;
 
   font-size: 0.82rem;
-  line-height: 1.5;
+
+  line-height: 1.65;
 }
 
-.bespoke {
-  min-height: 420px;
 
-  padding:
-    clamp(5rem, 8vw, 8rem)
-    5vw;
+/* ========================================
+   BESPOKE CTA
+======================================== */
+
+.bespoke {
+  width: 90%;
+  max-width: 1500px;
+
+  margin: 20px auto 100px;
+
+  padding: 70px;
 
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
-  gap: 3rem;
+  gap: 50px;
 
-  color: white;
   background: #11110f;
+  color: #ffffff;
 }
 
 .bespoke .eyebrow {
-  color: rgba(255, 255, 255, 0.55);
+  color: #aaa59c;
 }
 
 .bespoke h2 {
-  margin: 0;
+  margin: 0 0 20px;
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.8rem, 5vw, 5.3rem);
+
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 400;
 
-  line-height: 0.98;
-  letter-spacing: -0.05em;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
 }
 
 .bespoke p:not(.eyebrow) {
-  max-width: 600px;
+  margin: 0;
 
-  margin: 1.5rem 0 0;
+  max-width: 650px;
 
-  color: rgba(255, 255, 255, 0.67);
+  color: #c4c0b8;
 
-  line-height: 1.55;
+  font-size: 0.88rem;
+
+  line-height: 1.7;
 }
 
 .quoteButton {
   flex-shrink: 0;
 
+  min-width: 190px;
   min-height: 52px;
 
-  padding: 0 1.3rem;
+  padding: 0 18px;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  gap: 2rem;
-
-  color: #11110f;
   background: #ffffff;
+  color: #11110f;
 
   text-decoration: none;
 
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
-.footer {
-  padding: 2rem 5vw;
+.quoteButton:hover {
+  background: #e8e5df;
+}
 
+.quoteButton span {
+  transition: transform 0.2s ease;
+}
+
+.quoteButton:hover span {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
-  gap: 2rem;
+  gap: 30px;
 
-  background: #faf9f6;
+  padding: 45px 5vw;
+
+  border-top: 1px solid #d9d6cf;
 }
 
 .footer p {
-  margin: 0.45rem 0 0;
+  margin: 10px 0 0;
 
-  color: #66645f;
+  color: #78736c;
 
   font-size: 0.72rem;
 }
 
-@media (max-width: 850px) {
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
   .products {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
-  .card {
-    max-width: 650px;
+  .productHeading {
+    min-height: 110px;
+  }
+
+  .bespoke {
+    padding: 55px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 18px 20px;
+  }
+
+  .nav {
+    gap: 14px;
+  }
+
+  .nav a {
+    font-size: 0.68rem;
+  }
+
+  .hero {
+    padding:
+      65px 20px
+      50px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        2.8rem,
+        14vw,
+        4.5rem
+      );
+  }
+
+  .intro {
+    font-size: 0.9rem;
+  }
+
+
+  /* PRODUCT GRID */
+
+  .products {
+    width: calc(100% - 40px);
+
+    grid-template-columns: 1fr;
+
+    gap: 24px;
   }
 
   .imageWrap {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 4.8;
+  }
+
+  .cardContent {
+    padding: 21px;
+  }
+
+  .productHeading {
+    min-height: 0;
+
+    margin-bottom: 14px;
+  }
+
+  .productHeading > span {
+    margin-top: 4px;
+  }
+
+
+  /* HOW IT WORKS */
+
+  .howItWorks {
+    width: calc(100% - 40px);
+
+    margin-top: 70px;
+
+    padding: 55px 0;
   }
 
   .steps {
     grid-template-columns: 1fr;
+
+    gap: 35px;
   }
 
+
+  /* BESPOKE */
+
   .bespoke {
-    align-items: flex-start;
+    width: calc(100% - 40px);
+
+    margin-bottom: 70px;
+
+    padding: 45px 25px;
+
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quoteButton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* FOOTER */
+
+  .footer {
+    padding: 35px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-@media (max-width: 600px) {
-  .header {
-    min-height: 62px;
 
-    padding-inline: 1.25rem;
-  }
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 470px) {
 
   .brand {
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
+    font-size: 0.82rem;
   }
 
   .nav {
-    gap: 0.8rem;
+    gap: 10px;
   }
 
   .nav a {
-    font-size: 0.7rem;
-  }
-
-  .hero,
-  .products,
-  .howItWorks,
-  .bespoke {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    font-size: 0.62rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.6rem, 17vw, 5.4rem);
+    font-size: 2.8rem;
   }
 
-  .productHeading {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .cardContent p {
-    min-height: 0;
-  }
-
-  .footer {
-    padding: 2rem 1.25rem;
-
-    flex-direction: column;
-    align-items: flex-start;
+  .productHeading h2 {
+    font-size: 1.15rem;
   }
 }
