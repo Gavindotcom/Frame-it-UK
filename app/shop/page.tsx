@@ -173,7 +173,7 @@ export default function ShopPage() {
         </h1>
 
         <p className={styles.intro}>
-          Shop selected authentic and signed framed football memorabilia,
+          Shop selected authentic and signed framed football memorabilia (all with COA),
           or securely pay for a framing service you have already arranged
           with Frame It UK.
         </p>
