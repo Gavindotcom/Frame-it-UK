@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type WorkItem = {
   src: string;
@@ -23,128 +24,11 @@ const quoteMessage = encodeURIComponent(
 const quoteHref = `${whatsappBase}?text=${quoteMessage}`;
 
 
-/* -----------------------------
-   RECENT WORK
------------------------------- */
+/* ========================================
+   STRUCTURED DATA
+======================================== */
 
-const recentWork: WorkItem[] = [
-  {
-    src: "/images/work/brazil.webp",
-    title: "Brazil National Team",
-    subtitle: "Signed Shirt",
-    position: "50% 46%",
-  },
-  {
-    src: "/images/work/kerr.webp",
-    title: "Kerr",
-    subtitle: "Presentation Frame",
-    position: "50% 50%",
-  },
-  {
-    src: "/images/work/mcginn.webp",
-    title: "McGinn",
-    subtitle: "Signed Shirt with Photos",
-    position: "50% 54%",
-  },
-  {
-    src: "/images/work/celtic.webp",
-    title: "Celtic FC",
-    subtitle: "Multi-Signed Shirt",
-    position: "50% 50%",
-  },
-  {
-    src: "/images/work/mull.jpg.jpg",
-    title: "Mulligan",
-    subtitle: "Custom Mount Design",
-    position: "50% 39%",
-  },
-];
-
-
-/* -----------------------------
-   DESIGN OPTIONS
------------------------------- */
-
-const designs: DesignItem[] = [
-  {
-    src: "/images/work/brazil.webp",
-    title: "Classic Shirt Frame",
-    copy: "A clean, timeless layout that keeps your shirt at the centre.",
-    position: "50% 45%",
-  },
-  {
-    src: "/images/work/mcginn.webp",
-    title: "Photo Display",
-    copy: "Add personal photos and a plaque to tell the full story.",
-    position: "50% 55%",
-  },
-  {
-    src: "/images/work/assgaard-hero.jpeg.jpg",
-    title: "Custom Artwork Frame",
-    copy: "Bespoke artwork designed around your shirt and the moment.",
-    position: "50% 25%",
-  },
-  {
-    src: "/images/work/mull.jpg.jpg",
-    title: "Special Presentation Frame",
-    copy: "Custom mounts, club colours and presentation details.",
-    position: "50% 41%",
-  },
-  {
-    src: "/images/work/Double.jpeg.png",
-    title: "Double Shirt Frame",
-    copy: "Two shirts brought together in one statement display.",
-    position: "50% 50%",
-  },
-  {
-    src: "/images/work/bespoke.jpeg.jpg",
-    title: "Fully Bespoke",
-    copy: "Unique displays built around your item, your story and your ideas.",
-    position: "50% 50%",
-  },
-];
-
-
-/* -----------------------------
-   MORE WORK
------------------------------- */
-
-const moreWork: WorkItem[] = [
-  {
-    src: "/images/work/stevenson.webp",
-    title: "Stevenson",
-    position: "50% 50%",
-  },
-  {
-    src: "/images/work/bespoke.jpeg.jpg",
-    title: "Bespoke Design",
-    position: "50% 50%",
-  },
-  {
-    src: "/images/work/dinamo.webp",
-    title: "Dinamo Zagreb",
-    position: "50% 41%",
-  },
-  {
-    src: "/images/work/Hibs 7.png",
-    title: "Hibs",
-    position: "50% 46%",
-  },
-  {
-    src: "/images/Herats Youth.png",
-    title: "Hearts Youth Cup Winners",
-    position: "50% 50%",
-  },
-  {
-    src: "/images/work/Darts.png",
-    title: "Darts",
-    position: "50% 47%",
-  },
-];
-
-
-export default function HomePage() {
-  const businessSchema = {
+const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://frame-it-uk.com/#business",
@@ -154,7 +38,7 @@ export default function HomePage() {
   url: "https://frame-it-uk.com",
 
   description:
-    "Bespoke football shirt and sports memorabilia framing handmade in Scotland.",
+    "Bespoke football shirt framing and sports memorabilia framing handmade in Scotland.",
 
   image:
     "https://frame-it-uk.com/images/work/assgaard-hero.jpeg.jpg",
@@ -163,12 +47,12 @@ export default function HomePage() {
 
   areaServed: [
     {
-      "@type": "Country",
-      name: "United Kingdom",
-    },
-    {
       "@type": "AdministrativeArea",
       name: "Scotland",
+    },
+    {
+      "@type": "Country",
+      name: "United Kingdom",
     },
   ],
 
@@ -189,7 +73,6 @@ export default function HomePage() {
           name: "Classic Football Shirt Framing",
         },
       },
-
       {
         "@type": "Offer",
         itemOffered: {
@@ -197,7 +80,6 @@ export default function HomePage() {
           name: "Football Shirt Photo Display",
         },
       },
-
       {
         "@type": "Offer",
         itemOffered: {
@@ -205,7 +87,6 @@ export default function HomePage() {
           name: "Custom Artwork Football Shirt Frame",
         },
       },
-
       {
         "@type": "Offer",
         itemOffered: {
@@ -216,17 +97,222 @@ export default function HomePage() {
     ],
   },
 };
+
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does football shirt framing cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Frame It UK football shirt framing starts from £85. Bespoke layouts, artwork, photographs, double frames and specialist displays are quoted individually.",
+      },
+    },
+
+    {
+      "@type": "Question",
+      name: "Can you frame signed and match-worn football shirts?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. Frame It UK frames signed shirts, match-worn shirts, replica shirts and other sports memorabilia.",
+      },
+    },
+
+    {
+      "@type": "Question",
+      name: "Do you offer delivery?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "UK delivery is available on suitable frames. Perspex may be recommended for courier delivery, while glass-fronted frames may require collection or specialist delivery.",
+      },
+    },
+
+    {
+      "@type": "Question",
+      name: "Can I choose my own frame design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text:
+          "Yes. Frame It UK offers classic shirt frames, photo displays, custom artwork, presentation frames, double shirt frames and fully bespoke displays.",
+      },
+    },
+  ],
+};
+
+
+/* ========================================
+   RECENT WORK
+======================================== */
+
+const recentWork: WorkItem[] = [
+  {
+    src: "/images/work/brazil.webp",
+    title: "Brazil National Team",
+    subtitle: "Signed Shirt",
+    position: "50% 46%",
+  },
+
+  {
+    src: "/images/work/kerr.webp",
+    title: "Kerr",
+    subtitle: "Presentation Frame",
+    position: "50% 50%",
+  },
+
+  {
+    src: "/images/work/mcginn.webp",
+    title: "McGinn",
+    subtitle: "Signed Shirt with Photos",
+    position: "50% 54%",
+  },
+
+  {
+    src: "/images/work/celtic.webp",
+    title: "Celtic FC",
+    subtitle: "Multi-Signed Shirt",
+    position: "50% 50%",
+  },
+
+  {
+    src: "/images/work/dinamo.webp",
+    title: "Dinamo Zagreb",
+    subtitle: "Custom Mount Design",
+    position: "50% 39%",
+  },
+];
+
+
+/* ========================================
+   DESIGN OPTIONS
+======================================== */
+
+const designs: DesignItem[] = [
+  {
+    src: "/images/work/brazil.webp",
+    title: "Classic Shirt Frame",
+    copy:
+      "A clean, timeless presentation that keeps the shirt at the centre.",
+    position: "50% 45%",
+  },
+
+  {
+    src: "/images/work/mcginn.webp",
+    title: "Photo Display",
+    copy:
+      "Combine your shirt with photographs and a personalised plaque.",
+    position: "50% 55%",
+  },
+
+  {
+    src: "/images/work/aasgaard.webp",
+    title: "Custom Artwork Frame",
+    copy:
+      "Bespoke artwork created around your shirt, player or memorable moment.",
+    position: "50% 25%",
+  },
+
+  {
+    src: "/images/work/dinamo.webp",
+    title: "Special Presentation Frame",
+    copy:
+      "Custom mounts, club colours and premium presentation details.",
+    position: "50% 41%",
+  },
+
+  {
+    src: "/images/work/Double.jpeg.png",
+    title: "Double Shirt Frame",
+    copy:
+      "Two shirts brought together in one large statement display.",
+    position: "50% 50%",
+  },
+
+  {
+    src: "/images/work/bespoke.jpeg.jpg",
+    title: "Fully Bespoke",
+    copy:
+      "Unique displays created around your memorabilia, story and ideas.",
+    position: "50% 50%",
+  },
+];
+
+
+/* ========================================
+   MORE WORK
+======================================== */
+
+const moreWork: WorkItem[] = [
+  {
+    src: "/images/work/stevenson.webp",
+    title: "Stevenson",
+    position: "50% 50%",
+  },
+
+  {
+    src: "/images/work/bespoke.jpeg.jpg",
+    title: "Bespoke Design",
+    position: "50% 50%",
+  },
+
+  {
+    src: "/images/work/dinamo.webp",
+    title: "Dinamo Zagreb",
+    position: "50% 41%",
+  },
+
+  {
+    src: "/images/work/brazil.webp",
+    title: "Brazil",
+    position: "50% 46%",
+  },
+
+  {
+    src: "/images/work/kerr-alt.webp",
+    title: "Kerr",
+    position: "50% 50%",
+  },
+
+  {
+    src: "/images/work/mcginn-alt.webp",
+    title: "McGinn",
+    position: "50% 47%",
+  },
+];
+
+
+export default function HomePage() {
   return (
     <main>
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(businessSchema),
-  }}
-/>
-      {/* =============================
+
+      {/* ========================================
+          SEO STRUCTURED DATA
+      ======================================== */}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(businessSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+
+      {/* ========================================
           HEADER
-      ============================== */}
+      ======================================== */}
 
       <header className="siteHeader">
 
@@ -239,31 +325,32 @@ export default function HomePage() {
         </a>
 
         <nav
-  className="nav"
-  aria-label="Main navigation"
->
-  <a href="#designs">
-    Designs
-  </a>
+          className="nav"
+          aria-label="Main navigation"
+        >
+          <a href="#designs">
+            Designs
+          </a>
 
-  <a href="#gallery">
-    Gallery
-  </a>
+          <a href="#gallery">
+            Gallery
+          </a>
 
-  <a href="/shop">
-    Shop
-  </a>
+          <Link href="/shop">
+            Shop
+          </Link>
 
-  <a href="#quote">
-    Quote
-  </a>
-</nav>
+          <a href="#quote">
+            Quote
+          </a>
+        </nav>
+
       </header>
 
 
-      {/* =============================
+      {/* ========================================
           HERO
-      ============================== */}
+      ======================================== */}
 
       <section
         className="hero"
@@ -273,7 +360,7 @@ export default function HomePage() {
         <div className="heroCopy">
 
           <p className="eyebrow">
-            Bespoke sports memorabilia framing
+            Football Shirt Framing in Scotland
           </p>
 
           <h1>
@@ -285,8 +372,9 @@ export default function HomePage() {
           </h1>
 
           <p className="heroText">
-            Bespoke football shirt and memorabilia framing,
-            handmade in Scotland.
+            Bespoke football shirt framing, signed shirt
+            framing and sports memorabilia displays,
+            handmade in Scotland and available across the UK.
           </p>
 
 
@@ -301,7 +389,6 @@ export default function HomePage() {
                 →
               </span>
             </a>
-
 
             <a
               className="button buttonLight"
@@ -372,16 +459,14 @@ export default function HomePage() {
         </div>
 
 
-        {/* NEW HERO IMAGE */}
-
         <div
           className="heroVisual"
-          aria-label="Custom artwork frame example"
+          aria-label="Bespoke football shirt frame"
         >
 
           <Image
             src="/images/work/assgaard-hero.jpeg.jpg"
-            alt="Framed Aasgaard match worn signed Rangers football shirt"
+            alt="Bespoke framed football shirt by Frame It UK"
             fill
             priority
             sizes="(max-width: 900px) 100vw, 50vw"
@@ -393,10 +478,9 @@ export default function HomePage() {
       </section>
 
 
-
-      {/* =============================
+      {/* ========================================
           RECENT WORK
-      ============================== */}
+      ======================================== */}
 
       <section
         className="section"
@@ -416,7 +500,6 @@ export default function HomePage() {
             </h2>
 
           </div>
-
 
           <a href="#more-work">
             View More
@@ -452,11 +535,9 @@ export default function HomePage() {
 
               </div>
 
-
               <h3>
                 {item.title}
               </h3>
-
 
               {item.subtitle && (
                 <p>
@@ -473,10 +554,9 @@ export default function HomePage() {
       </section>
 
 
-
-      {/* =============================
-          CHOOSE YOUR DESIGN
-      ============================== */}
+      {/* ========================================
+          DESIGNS
+      ======================================== */}
 
       <section
         className="section designsSection"
@@ -486,7 +566,7 @@ export default function HomePage() {
         <div className="centerHeading">
 
           <p className="eyebrow">
-            Find your style
+            Find Your Style
           </p>
 
           <h2>
@@ -494,8 +574,9 @@ export default function HomePage() {
           </h2>
 
           <p>
-            A range of framing styles to suit your shirt,
-            your story and your space.
+            From traditional shirt framing to completely
+            bespoke presentation pieces, every display is
+            designed around your memorabilia.
           </p>
 
         </div>
@@ -547,19 +628,17 @@ export default function HomePage() {
       </section>
 
 
-
-      {/* =============================
+      {/* ========================================
           MADE FOR YOU
-      ============================== */}
+      ======================================== */}
 
       <section className="madeForYou">
 
         <div className="madeCopy">
 
           <p className="eyebrow">
-            Made for you
+            Made For You
           </p>
-
 
           <h2>
             Individually designed.
@@ -567,15 +646,13 @@ export default function HomePage() {
             Handmade in Scotland.
           </h2>
 
-
           <p>
             Every frame is designed around your shirt and
-            your story. From signed shirts and match-worn
-            kits to photographs, plaques, custom mounts and
+            your story. From signed and match-worn shirts
+            to photographs, plaques, custom mounts and
             bespoke artwork, we create a display that feels
             personal to you.
           </p>
-
 
           <a
             className="textLink"
@@ -594,7 +671,7 @@ export default function HomePage() {
 
           <Image
             src="/images/work/mcginn-alt.webp"
-            alt="Close detail of bespoke football shirt framing"
+            alt="Bespoke football shirt framing by Frame It UK"
             fill
             sizes="(max-width: 900px) 100vw, 55vw"
             className="madeImage"
@@ -605,10 +682,146 @@ export default function HomePage() {
       </section>
 
 
+      {/* ========================================
+          SHOP CTA
+      ======================================== */}
 
-      {/* =============================
-          MORE OF OUR WORK
-      ============================== */}
+      <section
+        className="section"
+        style={{
+          textAlign: "center",
+          background: "#fbfaf7",
+        }}
+      >
+
+        <div
+          style={{
+            maxWidth: "780px",
+            margin: "0 auto",
+          }}
+        >
+
+          <p className="eyebrow">
+            Frame It UK Shop
+          </p>
+
+          <h2
+            style={{
+              marginBottom: "1.25rem",
+            }}
+          >
+            Shop Framed Memorabilia
+          </h2>
+
+          <p
+            style={{
+              maxWidth: "620px",
+              margin: "0 auto",
+              color: "#66645f",
+              fontFamily:
+                'Georgia, "Times New Roman", serif',
+              fontSize: "1.05rem",
+              lineHeight: 1.6,
+            }}
+          >
+            Browse selected framed shirts and
+            pre-arranged framing services, with secure
+            online payment through Stripe.
+          </p>
+
+          <div
+            className="buttonRow"
+            style={{
+              justifyContent: "center",
+            }}
+          >
+
+            <Link
+              href="/shop"
+              className="button buttonDark"
+            >
+              Visit The Shop
+              <span aria-hidden="true">
+                →
+              </span>
+            </Link>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ========================================
+          TRUST
+      ======================================== */}
+
+      <section
+        className="section"
+        style={{
+          background: "#efede8",
+        }}
+      >
+
+        <div className="centerHeading">
+
+          <p className="eyebrow">
+            Why Frame It UK
+          </p>
+
+          <h2>
+            Your memorabilia.
+            <br />
+            In safe hands.
+          </h2>
+
+        </div>
+
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(190px, 1fr))",
+            gap: "1rem",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
+
+          <TrustCard
+            number="01"
+            title="Handmade in Scotland"
+            copy="Every display is individually assembled and finished by hand."
+          />
+
+          <TrustCard
+            number="02"
+            title="Bespoke Design"
+            copy="Your shirt, photographs and memorabilia shape the final design."
+          />
+
+          <TrustCard
+            number="03"
+            title="Secure Payments"
+            copy="Online purchases are processed securely through Stripe."
+          />
+
+          <TrustCard
+            number="04"
+            title="UK Delivery"
+            copy="Delivery is available on suitable frames throughout the UK."
+          />
+
+        </div>
+
+      </section>
+
+
+      {/* ========================================
+          MORE WORK
+      ======================================== */}
 
       <section
         className="section"
@@ -620,7 +833,7 @@ export default function HomePage() {
           <div>
 
             <p className="eyebrow">
-              More examples
+              More Examples
             </p>
 
             <h2>
@@ -668,7 +881,6 @@ export default function HomePage() {
 
               </div>
 
-
               <h3>
                 {item.title}
               </h3>
@@ -682,10 +894,81 @@ export default function HomePage() {
       </section>
 
 
+      {/* ========================================
+          FAQ
+      ======================================== */}
 
-      {/* =============================
-          QUOTE
-      ============================== */}
+      <section
+        className="section"
+        style={{
+          background: "#fbfaf7",
+        }}
+      >
+
+        <div
+          style={{
+            maxWidth: "950px",
+            margin: "0 auto",
+          }}
+        >
+
+          <div
+            className="centerHeading"
+            style={{
+              marginBottom: "3rem",
+            }}
+          >
+
+            <p className="eyebrow">
+              Frequently Asked Questions
+            </p>
+
+            <h2>
+              A Few Things
+              <br />
+              You Might Want to Know
+            </h2>
+
+          </div>
+
+
+          <div>
+
+            <FAQ
+              question="How much does shirt framing cost?"
+              answer="Football shirt framing starts from £85. More complex designs such as photo displays, custom artwork, double frames and fully bespoke pieces are quoted individually."
+            />
+
+            <FAQ
+              question="Can you frame signed or match-worn shirts?"
+              answer="Yes. We regularly frame signed shirts, match-worn shirts, replica shirts and other sports memorabilia."
+            />
+
+            <FAQ
+              question="Can I include photographs or a plaque?"
+              answer="Yes. Photographs, personalised plaques, club badges, tickets and other memorabilia can all be incorporated into your display."
+            />
+
+            <FAQ
+              question="Do you offer delivery?"
+              answer="UK delivery is available on suitable frames. Perspex may be recommended for courier delivery. Glass-fronted frames may require collection or specialist delivery."
+            />
+
+            <FAQ
+              question="How do I get started?"
+              answer="Send us a WhatsApp message with a photograph of your shirt or memorabilia and an idea of the design you would like. We can then discuss the layout and provide a quote."
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ========================================
+          QUOTE CTA
+      ======================================== */}
 
       <section
         className="quoteSection"
@@ -693,14 +976,12 @@ export default function HomePage() {
       >
 
         <p className="eyebrow lightEyebrow">
-          Ready when you are
+          Ready When You Are
         </p>
-
 
         <h2>
           Shirt framing from £85
         </h2>
-
 
         <p>
           Bespoke designs quoted individually.
@@ -718,7 +999,6 @@ export default function HomePage() {
             Chat on WhatsApp
           </a>
 
-
           <a
             className="button quoteOutline"
             href={quoteHref}
@@ -733,10 +1013,9 @@ export default function HomePage() {
       </section>
 
 
-
-      {/* =============================
+      {/* ========================================
           FOOTER
-      ============================== */}
+      ======================================== */}
 
       <footer className="footer">
 
@@ -758,6 +1037,10 @@ export default function HomePage() {
 
         <div className="footerLinks">
 
+          <Link href="/shop">
+            Shop
+          </Link>
+
           <a
             href="https://www.instagram.com/fram3_it"
             target="_blank"
@@ -766,7 +1049,6 @@ export default function HomePage() {
             Instagram
           </a>
 
-
           <a
             href="https://www.facebook.com/share/1EDtE1bXL7/"
             target="_blank"
@@ -774,7 +1056,6 @@ export default function HomePage() {
           >
             Facebook
           </a>
-
 
           <a
             href={quoteHref}
@@ -794,5 +1075,112 @@ export default function HomePage() {
       </footer>
 
     </main>
+  );
+}
+
+
+/* ========================================
+   TRUST CARD
+======================================== */
+
+function TrustCard({
+  number,
+  title,
+  copy,
+}: {
+  number: string;
+  title: string;
+  copy: string;
+}) {
+  return (
+    <article
+      style={{
+        padding: "1.5rem",
+        background: "#ffffff",
+        borderTop: "2px solid #11110f",
+      }}
+    >
+
+      <span
+        style={{
+          color: "#8a857d",
+          fontSize: "0.68rem",
+        }}
+      >
+        {number}
+      </span>
+
+      <h3
+        style={{
+          margin: "1.4rem 0 0.65rem",
+          fontFamily:
+            'Georgia, "Times New Roman", serif',
+          fontWeight: 400,
+          fontSize: "1.25rem",
+        }}
+      >
+        {title}
+      </h3>
+
+      <p
+        style={{
+          margin: 0,
+          color: "#66645f",
+          fontSize: "0.8rem",
+          lineHeight: 1.55,
+        }}
+      >
+        {copy}
+      </p>
+
+    </article>
+  );
+}
+
+
+/* ========================================
+   FAQ ITEM
+======================================== */
+
+function FAQ({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
+  return (
+    <details
+      style={{
+        borderTop: "1px solid #d8d5ce",
+        padding: "1.3rem 0",
+      }}
+    >
+
+      <summary
+        style={{
+          cursor: "pointer",
+          listStyle: "none",
+          fontFamily:
+            'Georgia, "Times New Roman", serif',
+          fontSize: "1.15rem",
+        }}
+      >
+        {question}
+      </summary>
+
+      <p
+        style={{
+          maxWidth: "760px",
+          margin: "1rem 0 0",
+          color: "#66645f",
+          fontSize: "0.85rem",
+          lineHeight: 1.65,
+        }}
+      >
+        {answer}
+      </p>
+
+    </details>
   );
 }
