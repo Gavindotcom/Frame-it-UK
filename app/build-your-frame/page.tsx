@@ -616,5 +616,4 @@ function ShirtPreview() {
     </svg>
   );
 }
-  );
-}
+
