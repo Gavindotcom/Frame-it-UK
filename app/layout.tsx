@@ -5,14 +5,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://frame-it-uk.com"),
 
   title: {
-    default:
-      "Football Shirt Framing Scotland | Frame It UK",
-    template:
-      "%s | Frame It UK",
+    default: "Football Shirt Framing Scotland | Frame It UK",
+    template: "%s | Frame It UK",
   },
 
   description:
-    "Bespoke football shirt framing and sports memorabilia framing in Scotland. Signed shirts, match-worn shirts, custom artwork, photo displays, plaques, double shirt frames and fully bespoke designs.",
+    "Bespoke football shirt framing in Scotland. Signed and match-worn shirts, photo displays, custom artwork, plaques, double frames and sports memorabilia framing by Frame It UK.",
 
   keywords: [
     "football shirt framing",
@@ -29,13 +27,18 @@ export const metadata: Metadata = {
     "Frame It UK",
   ],
 
-  alternates: {
-    canonical: "https://frame-it-uk.com",
-  },
+  authors: [
+    {
+      name: "Frame It UK",
+      url: "https://frame-it-uk.com",
+    },
+  ],
+
+  creator: "Frame It UK",
+  publisher: "Frame It UK",
 
   openGraph: {
-    title:
-      "Football Shirt Framing Scotland | Frame It UK",
+    title: "Football Shirt Framing Scotland | Frame It UK",
 
     description:
       "Your shirt. Your memories. Framed. Bespoke football shirt and sports memorabilia framing handmade in Scotland.",
@@ -61,8 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Football Shirt Framing Scotland | Frame It UK",
+    title: "Football Shirt Framing Scotland | Frame It UK",
 
     description:
       "Bespoke football shirt and sports memorabilia framing handmade in Scotland.",
@@ -75,13 +77,18 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
+
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
+
+  category: "Sports Memorabilia Framing",
 };
 
 export default function RootLayout({
