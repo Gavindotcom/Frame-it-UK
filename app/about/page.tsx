@@ -28,20 +28,26 @@ const whatsappHref =
 
 export default function AboutPage() {
   return (
-    <main className="site">
+    <main>
 
       {/* ========================================
-          NAV
+          HEADER
       ======================================== */}
 
-      <nav className="nav">
+      <header className="siteHeader">
 
-        <Link href="/" className="logo">
+        <Link
+          className="brand"
+          href="/"
+          aria-label="Frame It UK home"
+        >
           FRAME IT UK
         </Link>
 
-        <div className="navLinks">
-
+        <nav
+          className="nav"
+          aria-label="Main navigation"
+        >
           <Link href="/">
             Home
           </Link>
@@ -54,123 +60,74 @@ export default function AboutPage() {
             Gallery
           </Link>
 
+          <Link href="/about">
+            About
+          </Link>
+
           <Link href="/shop">
             Shop
           </Link>
 
-        </div>
+          <Link href="/#quote">
+            Quote
+          </Link>
+        </nav>
 
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noreferrer"
-          className="navBtn"
+      </header>
+
+
+      {/* ========================================
+          ABOUT HERO
+      ======================================== */}
+
+      <section
+        className="section"
+        style={{
+          paddingTop: "110px",
+          paddingBottom: "90px",
+        }}
+      >
+
+        <div
+          style={{
+            maxWidth: "1000px",
+          }}
         >
-          Chat on WhatsApp
-        </a>
 
-      </nav>
+          <p className="eyebrow">
+            About Frame It UK
+          </p>
 
+          <h1
+            style={{
+              fontFamily: 'Georgia, "Times New Roman", serif',
+              fontWeight: 400,
+              fontSize: "clamp(3rem, 7vw, 6.5rem)",
+              lineHeight: 0.98,
+              letterSpacing: "-0.045em",
+              margin: "0 0 35px",
+            }}
+          >
+            More than a shirt.
+            <br />
+            More than a frame.
+          </h1>
 
-      {/* ========================================
-          HERO
-      ======================================== */}
-
-      <section className="section">
-
-        <p className="eyebrow">
-          About Frame It UK
-        </p>
-
-        <h1>
-          More than a shirt.
-          <br />
-          More than a frame.
-        </h1>
-
-        <p className="sub">
-          Frame It UK was created from a love of football,
-          sport and the memories attached to the items we
-          keep.
-        </p>
-
-        <p className="sub">
-          Based in Scotland, we specialise in bespoke
-          football shirt framing and sports memorabilia
-          displays designed around the story behind each
-          piece.
-        </p>
-
-      </section>
-
-
-      {/* ========================================
-          WHAT WE DO
-      ======================================== */}
-
-      <section className="section">
-
-        <div className="grid">
-
-          <div className="card">
-
-            <p className="eyebrow">
-              01
-            </p>
-
-            <h3>
-              Built Around the Story
-            </h3>
-
-            <p>
-              A match-worn shirt, a signed piece, a child&apos;s
-              first football top or a memory from a special
-              game can mean far more than the item itself.
-              The frame should reflect that.
-            </p>
-
-          </div>
-
-
-          <div className="card">
-
-            <p className="eyebrow">
-              02
-            </p>
-
-            <h3>
-              Individually Designed
-            </h3>
-
-            <p>
-              We design each display around the memorabilia
-              rather than forcing every item into the same
-              template. Photographs, plaques, club colours,
-              custom artwork and additional memorabilia can
-              all form part of the finished piece.
-            </p>
-
-          </div>
-
-
-          <div className="card">
-
-            <p className="eyebrow">
-              03
-            </p>
-
-            <h3>
-              Handmade in Scotland
-            </h3>
-
-            <p>
-              Every frame is assembled and finished by hand,
-              with careful attention given to layout,
-              presentation and the small details that make
-              the finished display feel premium.
-            </p>
-
-          </div>
+          <p
+            style={{
+              maxWidth: "720px",
+              color: "#66645f",
+              fontSize: "1.05rem",
+              lineHeight: 1.75,
+              margin: 0,
+            }}
+          >
+            Frame It UK was created from a love of football,
+            sport and the memories attached to the items we
+            choose to keep. Based in Scotland, we create
+            bespoke football shirt and sports memorabilia
+            displays built around the story behind each piece.
+          </p>
 
         </div>
 
@@ -178,76 +135,59 @@ export default function AboutPage() {
 
 
       {/* ========================================
-          APPROACH
+          THREE VALUES
       ======================================== */}
 
-      <section className="how">
+      <section
+        className="section"
+        style={{
+          background: "#efede8",
+        }}
+      >
 
-        <p className="eyebrow">
-          Our Approach
-        </p>
+        <div className="centerHeading">
 
-        <h2>
-          Your memorabilia.
-          <br />
-          Your design.
-        </h2>
+          <p className="eyebrow">
+            What Matters To Us
+          </p>
 
-        <div className="steps">
+          <h2>
+            Designed around
+            <br />
+            what matters to you.
+          </h2>
 
-          <div>
-
-            <strong>
-              01
-            </strong>
-
-            <p>
-              Start with the item and the story behind it.
-            </p>
-
-          </div>
+        </div>
 
 
-          <div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "1rem",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
 
-            <strong>
-              02
-            </strong>
+          <AboutCard
+            number="01"
+            title="Built Around the Story"
+            copy="A match-worn shirt, a signed piece, a child's first football top or a memory from a special game can mean far more than the item itself. The finished frame should reflect that."
+          />
 
-            <p>
-              Choose a layout, photographs, plaque or
-              artwork that complements it.
-            </p>
+          <AboutCard
+            number="02"
+            title="Individually Designed"
+            copy="We design the display around your memorabilia rather than forcing every item into the same template. Photos, plaques, club colours and custom artwork can all become part of the finished piece."
+          />
 
-          </div>
-
-
-          <div>
-
-            <strong>
-              03
-            </strong>
-
-            <p>
-              We build the display around your chosen
-              design.
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <strong>
-              04
-            </strong>
-
-            <p>
-              The finished piece is ready to become part
-              of your home, office or collection.
-            </p>
-
-          </div>
+          <AboutCard
+            number="03"
+            title="Handmade in Scotland"
+            copy="Every frame is individually assembled and finished by hand, with attention given to the layout, presentation and details that make the finished display feel special."
+          />
 
         </div>
 
@@ -255,57 +195,191 @@ export default function AboutPage() {
 
 
       {/* ========================================
-          TYPES OF WORK
+          BRAND STATEMENT
+      ======================================== */}
+
+      <section
+        className="madeForYou"
+        style={{
+          gridTemplateColumns: "1fr",
+        }}
+      >
+
+        <div
+          className="madeCopy"
+          style={{
+            maxWidth: "850px",
+          }}
+        >
+
+          <p className="eyebrow">
+            Why Frame It UK
+          </p>
+
+          <h2>
+            The item is important.
+            <br />
+            But so is the memory.
+          </h2>
+
+          <p>
+            Some shirts represent a favourite player.
+            Others mark a match, a season, a career or
+            something personal.
+          </p>
+
+          <p>
+            That&apos;s why we approach each frame as an
+            individual piece rather than simply mounting
+            a shirt inside a box.
+          </p>
+
+          <Link
+            className="textLink"
+            href="/#gallery"
+          >
+            See our work
+            <span aria-hidden="true">
+              →
+            </span>
+          </Link>
+
+        </div>
+
+      </section>
+
+
+      {/* ========================================
+          WHAT WE FRAME
       ======================================== */}
 
       <section className="section">
 
-        <p className="eyebrow">
-          What We Frame
-        </p>
+        <div className="centerHeading">
 
-        <h2>
-          From football shirts
-          <br />
-          to complete displays.
-        </h2>
+          <p className="eyebrow">
+            What We Frame
+          </p>
 
-        <div className="grid">
+          <h2>
+            From football shirts
+            <br />
+            to complete displays.
+          </h2>
 
-          <div className="card">
-            <h3>
-              Football Shirts
-            </h3>
+          <p>
+            From simple, clean shirt framing to large
+            completely bespoke pieces, the design is
+            built around the memorabilia.
+          </p>
 
-            <p>
-              Signed, match-worn, replica and personally
-              significant shirts.
+        </div>
+
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "1rem",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
+
+          <AboutCard
+            number="01"
+            title="Football Shirts"
+            copy="Signed, match-worn, replica and personally significant football shirts."
+          />
+
+          <AboutCard
+            number="02"
+            title="Sports Memorabilia"
+            copy="Boots, medals, tickets, photographs and other sporting keepsakes."
+          />
+
+          <AboutCard
+            number="03"
+            title="Photo Displays"
+            copy="Shirts combined with player photographs and personalised plaques."
+          />
+
+          <AboutCard
+            number="04"
+            title="Bespoke Pieces"
+            copy="Double frames, custom artwork, special presentations and completely unique displays."
+          />
+
+        </div>
+
+      </section>
+
+
+      {/* ========================================
+          HOW WE WORK
+      ======================================== */}
+
+      <section
+        className="section"
+        style={{
+          background: "#efede8",
+        }}
+      >
+
+        <div className="sectionHeading sectionHeadingLine">
+
+          <div>
+
+            <p className="eyebrow">
+              Our Approach
             </p>
+
+            <h2>
+              From idea
+              <br />
+              to finished frame.
+            </h2>
+
           </div>
 
-
-          <div className="card">
-            <h3>
-              Sports Memorabilia
-            </h3>
-
-            <p>
-              Boots, medals, tickets, photographs and
-              other sporting keepsakes.
-            </p>
-          </div>
+        </div>
 
 
-          <div className="card">
-            <h3>
-              Bespoke Displays
-            </h3>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(210px, 1fr))",
+            gap: "2rem",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
 
-            <p>
-              Double shirt frames, custom artwork,
-              presentation pieces and one-off designs.
-            </p>
-          </div>
+          <ProcessStep
+            number="01"
+            title="Tell us the story"
+            copy="Send us a photograph of the shirt or memorabilia and tell us what you have in mind."
+          />
+
+          <ProcessStep
+            number="02"
+            title="Choose the design"
+            copy="We work through the layout, photographs, plaque, mount and any additional details."
+          />
+
+          <ProcessStep
+            number="03"
+            title="We build it"
+            copy="Your display is individually prepared, assembled and finished."
+          />
+
+          <ProcessStep
+            number="04"
+            title="Ready to display"
+            copy="The finished piece is ready to become part of your home, office or collection."
+          />
 
         </div>
 
@@ -316,10 +390,13 @@ export default function AboutPage() {
           CTA
       ======================================== */}
 
-      <section className="cta">
+      <section
+        className="quoteSection"
+        id="quote"
+      >
 
-        <p className="eyebrow">
-          Have Something to Frame?
+        <p className="eyebrow lightEyebrow">
+          Have Something To Frame?
         </p>
 
         <h2>
@@ -328,21 +405,214 @@ export default function AboutPage() {
 
         <p>
           Send us a photo of your shirt or memorabilia
-          and we&apos;ll help you work out the best way to
-          display it.
+          and we&apos;ll help you decide how best to display it.
         </p>
 
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noreferrer"
-          className="primary"
-        >
-          Chat on WhatsApp
-        </a>
+        <div className="buttonRow quoteButtons">
+
+          <a
+            className="button whatsappButton"
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chat on WhatsApp
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+
+        </div>
 
       </section>
 
+
+      {/* ========================================
+          FOOTER
+      ======================================== */}
+
+      <footer className="footer">
+
+        <div>
+
+          <Link
+            className="brand footerBrand"
+            href="/"
+          >
+            FRAME IT UK
+          </Link>
+
+          <p>
+            Bespoke framing. Bigger stories.
+          </p>
+
+        </div>
+
+
+        <div className="footerLinks">
+
+          <Link href="/">
+            Home
+          </Link>
+
+          <Link href="/about">
+            About
+          </Link>
+
+          <Link href="/shop">
+            Shop
+          </Link>
+
+          <Link href="/#gallery">
+            Gallery
+          </Link>
+
+          <a
+            href="https://www.instagram.com/fram3_it"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+        <p className="copyright">
+          © 2026 Frame It UK
+        </p>
+
+      </footer>
+
     </main>
+  );
+}
+
+
+/* ========================================
+   ABOUT CARD
+======================================== */
+
+function AboutCard({
+  number,
+  title,
+  copy,
+}: {
+  number: string;
+  title: string;
+  copy: string;
+}) {
+  return (
+    <article
+      style={{
+        minHeight: "220px",
+        padding: "1.7rem",
+        background: "#ffffff",
+        borderTop: "2px solid #11110f",
+      }}
+    >
+
+      <span
+        style={{
+          color: "#8a857d",
+          fontSize: "0.68rem",
+          fontWeight: 600,
+        }}
+      >
+        {number}
+      </span>
+
+      <h3
+        style={{
+          margin: "2rem 0 0.8rem",
+          fontFamily:
+            'Georgia, "Times New Roman", serif',
+          fontSize: "1.35rem",
+          fontWeight: 400,
+        }}
+      >
+        {title}
+      </h3>
+
+      <p
+        style={{
+          margin: 0,
+          color: "#66645f",
+          fontSize: "0.82rem",
+          lineHeight: 1.65,
+        }}
+      >
+        {copy}
+      </p>
+
+    </article>
+  );
+}
+
+
+/* ========================================
+   PROCESS STEP
+======================================== */
+
+function ProcessStep({
+  number,
+  title,
+  copy,
+}: {
+  number: string;
+  title: string;
+  copy: string;
+}) {
+  return (
+    <div
+      style={{
+        borderTop: "2px solid #11110f",
+        paddingTop: "1.4rem",
+      }}
+    >
+
+      <span
+        style={{
+          display: "block",
+          marginBottom: "2rem",
+          color: "#8a857d",
+          fontSize: "0.68rem",
+          fontWeight: 700,
+        }}
+      >
+        {number}
+      </span>
+
+      <h3
+        style={{
+          margin: "0 0 0.8rem",
+          fontFamily:
+            'Georgia, "Times New Roman", serif',
+          fontWeight: 400,
+          fontSize: "1.3rem",
+        }}
+      >
+        {title}
+      </h3>
+
+      <p
+        style={{
+          margin: 0,
+          color: "#66645f",
+          lineHeight: 1.65,
+          fontSize: "0.82rem",
+        }}
+      >
+        {copy}
+      </p>
+
+    </div>
   );
 }
