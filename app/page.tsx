@@ -57,7 +57,7 @@ const businessSchema = {
   ],
 
   sameAs: [
-    "https://www.instagram.com/fram3_it",
+    "https://www.instagram.com/frame_it_uk?vrfl=MWkzYXRtaWdqYWNlMw==",
   ],
 
   hasOfferCatalog: {
