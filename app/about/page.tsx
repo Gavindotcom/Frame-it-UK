@@ -468,7 +468,7 @@ export default function AboutPage() {
           </Link>
 
           <a
-  href="https://www.instagram.com/frame_it_uk?vrfl=MWkzYXRtaWdqYWNlMw=="
+  href="https://www.instagram.com/frame_it_uk/"
   target="_blank"
   rel="noreferrer"
 >
