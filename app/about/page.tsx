@@ -468,12 +468,12 @@ export default function AboutPage() {
           </Link>
 
           <a
-            href="https://www.instagram.com/fram3_it"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Instagram
-          </a>
+  href="https://www.instagram.com/frame_it_uk?vrfl=MWkzYXRtaWdqYWNlMw=="
+  target="_blank"
+  rel="noreferrer"
+>
+  Instagram
+</a>
 
           <a
             href={whatsappHref}
