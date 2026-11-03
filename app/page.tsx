@@ -335,7 +335,7 @@ export default function HomePage() {
   </Link>
 
   <a
-    href="https://www.instagram.com/fram3_it"
+    href="https://www.instagram.com/frame_it_uk/"
     target="_blank"
     rel="noreferrer"
   >
