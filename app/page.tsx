@@ -980,35 +980,27 @@ export default function HomePage() {
         </p>
 
         <h2>
-          Shirt framing from £85
+          Have a shirt you want framed?
         </h2>
 
         <p>
-          Bespoke designs quoted individually.
+         Send us a message and we’ll help you choose the right design.
         </p>
 
 
-        <div className="buttonRow quoteButtons">
+       <div className="buttonRow quoteButtons">
 
-          <a
-            className="button whatsappButton"
-            href={quoteHref}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Chat on WhatsApp
-          </a>
+  <a
+    className="button whatsappButton"
+    href={quoteHref}
+    target="_blank"
+    rel="noreferrer"
+  >
+    Chat on WhatsApp
+    <span aria-hidden="true">→</span>
+  </a>
 
-          <a
-            className="button quoteOutline"
-            href={quoteHref}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Request a Quote
-          </a>
-
-        </div>
+</div>
 
       </section>
 
