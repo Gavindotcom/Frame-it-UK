@@ -726,7 +726,7 @@ export default function HomePage() {
           >
             Browse selected framed shirts and
             pre-arranged framing services, with secure
-            online payment through Stripe.
+            online payment.
           </p>
 
           <div
