@@ -9,88 +9,107 @@ type Product = {
   image: string;
   paymentLink: string;
   badge?: string;
+  type: "memorabilia" | "service";
 };
 
 const products: Product[] = [
   {
-  name: "Benjamin Nygren Home Shirt – Player Edition Framed Display",
-  price: "£199",
-  description: `2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass requires collection or specialist delivery and is not suitable for standard courier delivery.`,
-  image: "/images/Coming Soon.png",
-  paymentLink: "https://buy.stripe.com/4gMbIUaXP3dG3Xz0WSeME02",
-  badge: "COA Provided",
-},
+    name: "Benjamin Nygren Home Shirt – Player Edition Framed Display",
+    price: "£199",
+    description:
+      "2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass is available for collection or specialist delivery.",
+    image: "/images/Coming Soon.png",
+    paymentLink: "https://buy.stripe.com/4gMbIUaXP3dG3Xz0WSeME02",
+    badge: "COA PROVIDED",
+    type: "memorabilia",
+  },
+
   {
     name: "QPR 2026/27 Glen Kamara Match-Worn Home Shirt – MWS Authenticated Player Edition",
     price: "£249.99",
     description:
-      "An authentic match-worn QPR 2026/27 home shirt worn by Glen Kamara, in the 4-1 home win against Derby County 14/10/26. Professionally presented in our premium black Player Edition frame, featuring bold KAMARA lettering, precision-cut mount with white bevel detailing and three player photographs. Available with glass front for collection only, or Perspex for standard courier delivery. A unique collector's piece for any QPR supporter. Frame size 594 x 841 mm",
+      "Authentic Glen Kamara match-worn QPR 2026/27 home shirt, worn in the 4–1 home victory over Derby County on 14 October 2026. Professionally presented in our premium Player Edition frame with KAMARA lettering, white bevel detailing and three player photographs. Frame size 594 × 841 mm. Perspex is suitable for standard courier delivery; glass is available for collection or specialist delivery.",
     image: "/images/Coming Soon.png",
     paymentLink: "https://buy.stripe.com/fZu28kc1TdSkalXdJEeME03",
-    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
+    badge: "MATCH-WORN | FABRICKS TECHNOLOGY",
+    type: "memorabilia",
   },
+
   {
     name: "Scotland 2020/21 Ryan Christie Signed Home Shirt – Player Edition Framed Display",
     price: "£149.99",
     description:
-      "A Ryan Christie signed Scotland 2020/21 home shirt, professionally presented in our premium black Player Edition frame. Featuring bold CHRISTIE lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A stunning collector's piece celebrating Scottish international football. Frame Size 594 x 841 mm",
+      "Signed Ryan Christie Scotland 2020/21 home shirt, professionally presented in our premium black Player Edition frame. Featuring CHRISTIE lettering, precision-cut black mount with white bevel detailing and three player photographs. Frame size 594 × 841 mm. Perspex is suitable for standard courier delivery; glass is available for collection or specialist delivery.",
     image: "/images/Coming Soon.png",
     paymentLink: "https://buy.stripe.com/00w9AMd5XaG83Xz7lgeME01",
-    badge: "COA provided",
+    badge: "COA PROVIDED",
+    type: "memorabilia",
   },
-   {
+
+  {
     name: "Beşiktaş 2025/26 Rıdvan Yılmaz Match-Worn Home Shirt – MWS Authenticated Player Edition",
     price: "£249.99",
     description:
-      "An authentic match-worn Beşiktaş 2025/26 home shirt worn by Rıdvan Yılmaz, fully authenticated by MatchWornShirt (MWS). Professionally presented in our premium black Player Edition frame, featuring bold RIDVAN lettering, precision-cut mount with white bevel detailing and three player photographs.vAvailable with glass front for collection or specialist delivery, or Perspex for standard courier delivery.vA unique collector's piece for any Beşiktaş supporter. Frame size 594 x 841 mm",
+      "Authentic match-worn Beşiktaş 2025/26 home shirt worn by Rıdvan Yılmaz and authenticated by MatchWornShirt. Professionally presented in our premium black Player Edition frame with RIDVAN lettering, precision-cut mount, white bevel detailing and three player photographs. Frame size 594 × 841 mm. Perspex is suitable for standard courier delivery; glass is available for collection or specialist delivery.",
     image: "/images/Coming Soon.png",
     paymentLink: "https://buy.stripe.com/eVqaEQ3vneWo65H0WSeME04",
-    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
+    badge: "MATCH-WORN | FABRICKS TECHNOLOGY",
+    type: "memorabilia",
   },
-   {
+
+  {
     name: "Wolves 2025/26 Squad-Signed Home Shirt – Player Edition Framed Display",
     price: "£199",
     description:
-      "A Wolverhampton Wanderers 2025/26 home shirt, squad signed and sourced from MatchWornShirt (MWS). Professionally presented in our premium black A1 Player Edition frame, featuring bold WOLVES lettering, precision-cut black mount with white bevel detailing and three player photographs. Available with glass front for collection or specialist delivery, or Perspex for standard courier delivery. A fantastic collector's piece for any Wolves supporter. Frame size 594 x 841 mm",
+      "Wolverhampton Wanderers 2025/26 home shirt, squad signed and sourced from MatchWornShirt. Professionally presented in our premium black A1 Player Edition frame with WOLVES lettering, precision-cut black mount, white bevel detailing and three player photographs. Frame size 594 × 841 mm. Perspex is suitable for standard courier delivery; glass is available for collection or specialist delivery.",
     image: "/images/Coming Soon.png",
     paymentLink: "https://buy.stripe.com/cNi9AMc1T5lO65H8pkeME05",
-    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
+    badge: "SIGNED | FABRICKS TECHNOLOGY",
+    type: "memorabilia",
   },
-   {
+
+  {
     name: "Hibernian 2025/26 Jack Iredale Signed Match-Worn Shirt – Player Edition",
     price: "£124.99",
     description:
-      "An authentic, signed match-worn Jack Iredale Hibernian 2025/26 shirt, worn during Hibs' memorable 2–1 victory over Rangers at Ibrox on 13 May 2026. Fully authenticated by MatchWornShirt (MWS) using Fabricks technology.Presented in our premium black Player Edition frame, featuring IREDALE lettering, white bevel detailing and three player photographs. Glass front available for collection or specialist delivery; Perspex for standard courier delivery. Frame Size 594 x 841mm.",
+      "Authentic signed match-worn Jack Iredale Hibernian 2025/26 shirt, worn during Hibs' 2–1 victory over Rangers at Ibrox on 13 May 2026 and authenticated by MatchWornShirt using Fabricks technology. Presented in our premium black Player Edition frame with IREDALE lettering, white bevel detailing and three player photographs. Frame size 594 × 841 mm.",
     image: "/images/Coming Soon.png",
     paymentLink: "https://buy.stripe.com/bJe9AM0jb5lOcu58pkeME06",
-    badge: "Authentic Match-Worn Shirt | Fabricks Technology",
+    badge: "SIGNED MATCH-WORN | FABRICKS",
+    type: "memorabilia",
   },
-   {
+
+  {
     name: "Classic Shirt Framed Display",
     price: "£87.99",
     description:
-      "This is our Classic shirt frame display online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
+      "Our Classic Shirt Framed Display provides a clean, timeless presentation built around your shirt. This listing is for customers who have already agreed their framing requirements with Frame It UK. The image is for illustration purposes only.",
     image: "/images/work/brazil.webp",
     paymentLink: "https://buy.stripe.com/dRm4gs8PHg0scu5bBweME07",
     badge: "PRE-ARRANGED SERVICE",
+    type: "service",
   },
-   {
+
+  {
     name: "Framed Shirt Photo Display",
     price: "£97.99",
     description:
-      "This is our Framed Shirt Photo Display online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
-    image: "/images/mcginn-alt.webp",
+      "Our Framed Shirt Photo Display combines your shirt with selected photographs and a personalised presentation layout. This listing is for customers who have already agreed their framing requirements with Frame It UK. The image is for illustration purposes only.",
+    image: "/images/work/mcginn-alt.webp",
     paymentLink: "https://buy.stripe.com/6oUaEQ9TL7tW79L7lgeME08",
     badge: "PRE-ARRANGED SERVICE",
+    type: "service",
   },
+
   {
     name: "Custom Artwork Frame",
     price: "£169.99",
     description:
-      "This is our Custom Artwork Frame online purchase price. This image is for illustration purposes only. You are purchasing a pre-agreed service by paying through this option. For more details please get in touch by requesting a quote",
-    image: "/images/aasgaard.webp",
+      "Our Custom Artwork Frame combines your shirt with bespoke artwork created around the player, club or moment being celebrated. This listing is for customers who have already agreed their framing requirements with Frame It UK. The image is for illustration purposes only.",
+    image: "/images/work/aasgaard.webp",
     paymentLink: "https://buy.stripe.com/dRm5kwgi9eWo0Ln350eME09",
     badge: "PRE-ARRANGED SERVICE",
+    type: "service",
   },
 ];
 
@@ -98,9 +117,39 @@ function isStripeLink(link: string) {
   return link.startsWith("https://buy.stripe.com/");
 }
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@graph": products
+    .filter((product) => product.type === "memorabilia")
+    .map((product) => ({
+      "@type": "Product",
+      name: product.name,
+      description: product.description,
+      image: `https://frame-it-uk.com${product.image}`,
+      brand: {
+        "@type": "Brand",
+        name: "Frame It UK",
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "GBP",
+        price: product.price.replace("£", ""),
+        availability: "https://schema.org/InStock",
+        url: product.paymentLink,
+      },
+    })),
+};
+
 export default function ShopPage() {
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
+        }}
+      />
+
       <header className={styles.header}>
         <Link href="/" className={styles.brand}>
           FRAME IT UK
@@ -110,6 +159,7 @@ export default function ShopPage() {
           <Link href="/">Home</Link>
           <Link href="/#designs">Designs</Link>
           <Link href="/#gallery">Gallery</Link>
+          <Link href="/#quote">Quote</Link>
         </nav>
       </header>
 
@@ -117,14 +167,15 @@ export default function ShopPage() {
         <p className={styles.eyebrow}>Frame It UK Shop</p>
 
         <h1>
-          Frame the moments
+          Framed memorabilia.
           <br />
-          that matter.
+          Made to stand out.
         </h1>
 
         <p className={styles.intro}>
-          You can choose from a small selection of our most popular framing
-          options and pay securely online AND from time to time we also have some incredible authentic framed memoribila for sale. 
+          Shop selected authentic and signed framed football memorabilia,
+          or securely pay for a framing service you have already arranged
+          with Frame It UK.
         </p>
       </section>
 
@@ -155,6 +206,18 @@ export default function ShopPage() {
 
               <p>{product.description}</p>
 
+              {product.type === "service" && (
+                <p
+                  style={{
+                    fontSize: "0.75rem",
+                    fontWeight: 600,
+                    marginTop: "0.5rem",
+                  }}
+                >
+                  Please only purchase after discussing your frame with us.
+                </p>
+              )}
+
               {isStripeLink(product.paymentLink) ? (
                 <a
                   href={product.paymentLink}
@@ -162,7 +225,10 @@ export default function ShopPage() {
                   rel="noreferrer"
                   className={styles.buyButton}
                 >
-                  Buy Now
+                  {product.type === "memorabilia"
+                    ? "Buy Now"
+                    : "Pay For Your Frame"}
+
                   <span aria-hidden="true">→</span>
                 </a>
               ) : (
@@ -176,35 +242,40 @@ export default function ShopPage() {
       </section>
 
       <section className={styles.howItWorks}>
-        <p className={styles.eyebrow}>How it works</p>
+        <p className={styles.eyebrow}>Buying from Frame It UK</p>
 
-        <h2>Simple from order to frame.</h2>
+        <h2>Simple and secure.</h2>
 
         <div className={styles.steps}>
           <div>
             <span>01</span>
-            <h3>Choose your frame</h3>
+
+            <h3>Choose your item</h3>
+
             <p>
-              Select the framing option that best suits what you
-              have in mind.
+              Buy one of our available framed memorabilia pieces or select
+              a framing service you have already arranged with us.
             </p>
           </div>
 
           <div>
             <span>02</span>
+
             <h3>Pay securely</h3>
+
             <p>
-              Complete your payment through our secure Stripe
-              checkout.
+              Complete payment through our secure Stripe checkout.
             </p>
           </div>
 
           <div>
             <span>03</span>
-            <h3>We design it with you</h3>
+
+            <h3>Collection or delivery</h3>
+
             <p>
-              We’ll then arrange your shirt, photos, wording and
-              final design with you.
+              We will confirm the appropriate collection or delivery
+              arrangements for your frame.
             </p>
           </div>
         </div>
@@ -212,18 +283,18 @@ export default function ShopPage() {
 
       <section className={styles.bespoke}>
         <div>
-          <p className={styles.eyebrow}>Something different?</p>
+          <p className={styles.eyebrow}>Have your own shirt?</p>
 
           <h2>
-            Looking for something
+            Create something
             <br />
-            completely bespoke?
+            completely bespoke.
           </h2>
 
           <p>
-            Double frames, boots, medals, LED displays, custom
-            artwork and unique memorabilia pieces are quoted
-            individually.
+            From classic football shirt frames to custom artwork,
+            double shirt displays, boots, medals and LED framing,
+            we can create something around your memorabilia.
           </p>
         </div>
 
