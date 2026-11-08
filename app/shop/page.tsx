@@ -18,7 +18,7 @@ const products: Product[] = [
     price: "£199",
     description:
       "2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass is available for collection or specialist delivery.",
-    image: "/images/Coming Soon.png",
+    image: "/images/PXL_20261108_164806919.jpg",
     paymentLink: "https://buy.stripe.com/4gMbIUaXP3dG3Xz0WSeME02",
     badge: "COA PROVIDED",
     type: "memorabilia",
