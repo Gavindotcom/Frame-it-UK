@@ -81,7 +81,7 @@ const products: Product[] = [
 
   {
     name: "Classic Shirt Framed Display",
-    price: "£87.99",
+    price: "£89.99",
     description:
       "Our Classic Shirt Framed Display provides a clean, timeless presentation built around your shirt. This listing is for customers who have already agreed their framing requirements with Frame It UK. The image is for illustration purposes only.",
     image: "/images/work/brazil.webp",
