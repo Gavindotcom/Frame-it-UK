@@ -14,17 +14,6 @@ type Product = {
 
 const products: Product[] = [
   {
-    name: "Benjamin Nygren Home Shirt – Player Edition Framed Display",
-    price: "£199",
-    description:
-      "2025/26 Benjamin Nygren home shirt, professionally presented in our premium Player Edition frame. Featuring bold NYGREN lettering, precision-cut mount with white bevel detailing and a premium Perspex front. Glass is available for collection or specialist delivery.",
-    image: "/images/PXL_20261108_164806919.jpg",
-    paymentLink: "https://buy.stripe.com/4gMbIUaXP3dG3Xz0WSeME02",
-    badge: "COA PROVIDED",
-    type: "memorabilia",
-  },
-
-  {
     name: "QPR 2026/27 Glen Kamara Match-Worn Home Shirt – MWS Authenticated Player Edition",
     price: "£249.99",
     description:
